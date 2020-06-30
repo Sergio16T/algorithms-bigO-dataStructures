@@ -3,7 +3,7 @@
 const rotatedArray = [4, 5, 6, 7, 1, 2 ,3]; 
 
 //binary search 
-//o(log n) time complexity 
+// Logarithmic O(log n) time complexity 
 
 function findMin(array) {
     //create pointers for left and right (indices)

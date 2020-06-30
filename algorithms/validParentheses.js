@@ -14,7 +14,8 @@
 // Input: "{[]}"
 // Output: true
 
-// timeComplexity o(n)
+// Time Complexity 
+// Linear O(n)
 
 function isValid(s) {
     if (s === "") return true; 
