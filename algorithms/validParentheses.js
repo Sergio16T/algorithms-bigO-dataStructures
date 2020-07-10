@@ -19,7 +19,7 @@
 
 function isValid(s) {
     if (s === "") return true; 
-    const hashMap = {
+    const map = {
         "(" : ")", 
         "{" : "}", 
         "[" : "]"
@@ -28,8 +28,8 @@ function isValid(s) {
     // with "{[]}" example stack would equal ["}", "]"]; 
     for (let i =0; i < s.length; i++) {
         const el = s[i]; 
-        if(hashMap[el]) {
-            stack.push(hashMap[el])
+        if(map[el]) {
+            stack.push(map[el])
         } else if(el !== stack.pop()) {
             return false; 
         }

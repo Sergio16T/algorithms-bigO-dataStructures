@@ -10,7 +10,7 @@
 
 /* Terminology ------------
  * 1) originalHead represents the head of the original_head. It is never modified.
- * 2) clonedHead represents the head of the cloned linked list. It is never altered once set.
+ * 2) clonedHead represents the head of the cloned linked list. 
  * 3) oldHead represents a reference to the the head of the original linked list.
  *    It is used for traversing the original list (and hence mutable).
  * 4) newHead represents a reference to the head of the cloned linked list.
