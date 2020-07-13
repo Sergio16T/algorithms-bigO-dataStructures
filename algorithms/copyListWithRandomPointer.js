@@ -27,7 +27,8 @@ var copyRandomList = function(originalHead)
     var clonedHead = new Node(originalHead.val, null, null);
     
     // Create iterators for both the linked lists, 
-    // both references to original linked list so assignByReference applies here.. any changes to newHead will alter the clonedHead 
+    // both references to original linked list so assignByReference applies here.. 
+    // any changes when cloning and adding to newHead.next will alter the clonedHead.next values until clonedHead linked list is a copy of the original 
     var newHead = clonedHead;
     var oldHead = originalHead;
     
