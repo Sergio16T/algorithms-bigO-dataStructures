@@ -17,7 +17,12 @@ const memoFib = function() {
 // If the “memo” object does not contain a key for n, we calculate the fibonacci number for n and save it in the “memo” object as a key-value pair.
 // In both cases, we return memo[n], which is the nth number of the fibonacci sequence.
 
-
+// Recursive Fibonacci without Memoization
+//  O(2^n) or exponential
+function recursiveFibo(n) {
+    if(n<2) return n; 
+    return recursiveFibo(n-1) + recursiveFibo(n-2); 
+}
 
 // Fibonacci Linear O(n) time complexity solution 
 function fibo(n) {
