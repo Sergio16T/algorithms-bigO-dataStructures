@@ -11,6 +11,8 @@ const memoFib = function() {
       return memo[n]   
     }
 }
+//memoFib()(6) // returns 8 
+
 // The outer function, memoFib, contains a “memo” object, which will serve as our cache. A map of key/value pairs.
 // We then return a function, which has a closure over the “memo” object, and can thus can log the results of its function calls into the “memo.”
 // If the “memo” object contains a key for the value (n) for which we’re calculating fibonacci, we simply return memo[n]
