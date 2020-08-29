@@ -1,5 +1,3 @@
-# JavaScript Algorithms and Data Structures 
-
 <div align="center">
     <img src="https://res.cloudinary.com/dddnhychw/image/upload/v1598718831/Icons/JS_eqbfi5.png" alt="JavaScript Banner" width="500"/>
 </div>
