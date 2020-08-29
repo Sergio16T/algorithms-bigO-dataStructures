@@ -11,7 +11,7 @@
 // 2) to remove duplicates contract the string by removing from the beginning and moving our left pointer over 
 //    until we have a unique set again. 
 //    Note: removing from left until we have unique set works because we're checking at each index of string if that 
-//          is the longest set until we get to end of string 
+//          is the longest set 
 // 3) now that set is unique again we continue forward with our right pointer and repeat the process until our right pointer
 //  is at the end of the list 
 // 4) then we return the max which we've been assigning a value as we add to our set
@@ -30,7 +30,7 @@ var lengthOfLongestSubstring = function(s) {
             max = Math.max(max, set.size);
             right++; 
         } else {
-            set.delete(s.charAt(left)); // could also set.delete(set[left]);  
+            set.delete(set[left]); // could also write set.delete(s.charAt(left)); 
             left++; 
         }
     }

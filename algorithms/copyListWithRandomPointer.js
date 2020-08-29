@@ -35,7 +35,7 @@ var copyRandomList = function(originalHead)
     // Create a map which facilitates going vertically down from the original to cloned node
     var nodeJustBelow = new Map();
     
-    /* Node to Node mapping is compulsory to deal with duplicates in the linked list */
+    /* Node to Node mapping is compulsory(a must) to deal with duplicates in the linked list */
     
     // Link the nodes vertically
     nodeJustBelow.set(oldHead,newHead);
@@ -64,7 +64,7 @@ var copyRandomList = function(originalHead)
     while(oldHead && newHead)
     {
         // Traverse the random pointer of the original list and go down vertically and connect it
-        newHead.random = oldHead.random? nodeJustBelow.get(oldHead.random) : null;
+        newHead.random = oldHead.random ? nodeJustBelow.get(oldHead.random) : null;
         
         // Move forward in both the lists
         oldHead = oldHead.next;
