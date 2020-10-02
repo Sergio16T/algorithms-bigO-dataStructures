@@ -30,7 +30,7 @@ var lengthOfLongestSubstring = function(s) {
             max = Math.max(max, set.size);
             right++; 
         } else {
-            set.delete(set[left]); // could also write set.delete(s.charAt(left)); 
+            set.delete(s[left]); // could also write set.delete(s.charAt(left)); 
             left++; 
         }
     }
