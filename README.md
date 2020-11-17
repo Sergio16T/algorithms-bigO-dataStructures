@@ -37,8 +37,8 @@ const printAllItemsTwice = (arr, size) =>  {
         console.log(arr[i]);
     }
 
-    for(let i = 0; i < size; i++) {
-        console.log(arr[i]);
+    for(let j = 0; j < size; j++) {
+        console.log(arr[j]);
     }
 }
 ```
@@ -47,13 +47,13 @@ const printAllItemsTwice = (arr, size) =>  {
 
 ```JavaScript
 const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
-    console.log("First element of array:",arr[0]);
+    console.log("First element of array:", arr[0]);
 
     for(let i = 0; i < size/2; i++) {
         console.log(arr[i]);
     }
 
-    for(let i = 0; i < 100; i++) {
+    for(let j = 0; j < 100; j++) {
         console.log("Hi");
     }
 }
@@ -96,7 +96,7 @@ for (let i = 0; i < array1.length; i++) {
 }
 
 for (let j of array2) {
-    console.log(array2[j]);
+    console.log(j);
 }
 ```
 
@@ -111,7 +111,7 @@ let array2 = [2, 3, 4];
 
 for (let i = 0; i < array1.length; i++) {
     for(let j = 0; j < array2.length; j++) {
-        console.log(`${a}, ${b}`);
+        console.log(`${i}, ${j}`);
     }
 }
 ```
