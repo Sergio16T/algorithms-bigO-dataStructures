@@ -2,10 +2,10 @@
     <img src="https://res.cloudinary.com/dddnhychw/image/upload/v1598718831/Icons/JS_eqbfi5.png" alt="JavaScript Banner" width="500"/>
 </div>
 
-### Summary
+## Summary
 With this respository, I am solving Algorithms in JavaScript with notes including Big O time complexity analyisis. I am also writing tests for my solutions with Jest.
 
-## Core Concepts
+### Core Concepts
 - Iterative vs Recursive
 - Variables/Pointers Manipulation
 - Binary Search
@@ -19,11 +19,9 @@ With this respository, I am solving Algorithms in JavaScript with notes includin
 - Memoization
 
 
-### Big O Notes
+<h1> Big O Notes </h1>
 
 ## Drop The Constants
-
-* **Example:**
 
 > O(2n) is O(n)
 
@@ -62,7 +60,7 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
 
 ## Multi Part Algorithms
 
-* **:Add vs. Multiply:**
+### Add vs. Multiply
 
 * Add the Runtimes: If your algorithm is in the form "do this then, when you're all done do that" then you add the run times.
 
