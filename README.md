@@ -19,9 +19,7 @@ With this respository, I am solving Algorithms in JavaScript with notes includin
 - Memoization
 
 
-<h1> Big O Notes </h1>
-
-## Table of Contents
+## Big O Notes Table of Contents
 
 
 - [Drop the Constants](#drop-the-constants)
