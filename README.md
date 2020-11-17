@@ -68,7 +68,7 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
 
 ### Add vs. Multiply
 
-Add the Runtimes: If your algorithm is in the form "do this then, when you're all done do that" then you add the run times.
+Add the Runtimes: If your algorithm is in the form "do this, then, when you're all done, do that" then you add the run times.
 
 > O(A + B)
 
