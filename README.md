@@ -24,7 +24,7 @@ With this respository, I am solving Algorithms in JavaScript with notes includin
 
 - [Drop the Constants](#drop-the-constants)
 - [Drop Non Dominant Terms](#drop-non-dominant-terms)
-- [Multi Part Algorithms](#multi-part-algorithms)
+- [Multi Part Algorithms](#multi-part-algorithms-add-vs-multiply)
 
 
 ## Drop The Constants
