@@ -21,6 +21,14 @@ With this respository, I am solving Algorithms in JavaScript with notes includin
 
 <h1> Big O Notes </h1>
 
+## Table of Contents
+
+
+- [Drop the Constants](#drop-the-constants)
+- [Drop Non Dominant Terms](#drop-non-dominant-terms)
+- [Multi Part Algorithms](#multi-part-algorithms)
+
+
 ## Drop The Constants
 
 > O(2n) is O(n)
@@ -62,7 +70,7 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
 
 ### Add vs. Multiply
 
-* Add the Runtimes: If your algorithm is in the form "do this then, when you're all done do that" then you add the run times.
+Add the Runtimes: If your algorithm is in the form "do this then, when you're all done do that" then you add the run times.
 
 > O(A + B)
 
@@ -95,7 +103,7 @@ for (let j of array2) {
 }
 ```
 
-* Multiply the Runtimes: If your algorithm is in the form "do this for each time you do that" then you multiply the runtimes.
+Multiply the Runtimes: If your algorithm is in the form "do this for each time you do that" then you multiply the runtimes.
 
 > 0(A * B)
 
