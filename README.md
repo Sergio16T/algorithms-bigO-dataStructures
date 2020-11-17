@@ -64,9 +64,7 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
 - O(n + log n) becomes O(n)
 - O(5 * 2^n + 1000n^100) becomes O(2^n)
 
-## Multi Part Algorithms
-
-### Add vs. Multiply
+## Multi Part Algorithms Add vs. Multiply
 
 ### Add the Runtimes
 If your algorithm is in the form "do this, then, when you're all done, do that" then you add the run times.
