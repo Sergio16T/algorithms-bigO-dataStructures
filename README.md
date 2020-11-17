@@ -95,8 +95,8 @@ for (let i = 0; i < array1.length; i++) {
     console.log(array1[i]);
 }
 
-for (let j of array2) {
-    console.log(j);
+for (let value of array2) {
+    console.log(value);
 }
 ```
 
