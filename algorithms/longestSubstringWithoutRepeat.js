@@ -34,7 +34,7 @@ var lengthOfLongestSubstring = function(s) {
             left++; 
         }
     }
-    console.log(set)
+    // console.log(set)
     return max; 
 
 }
