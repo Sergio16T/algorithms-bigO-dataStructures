@@ -71,6 +71,21 @@ If your algorithm is in the form "do this, then, when you're all done, do that" 
 
 > O(A + B)
 
+```JavaScript
+let array1 = [1, 2, 3];
+let array2 = [2, 3, 4];
+
+for (let i = 0; i < array1.length; i++) {
+    console.log(array1[i]);
+}
+
+for (let value of array2) {
+    console.log(value);
+}
+```
+
+> O(A + B)
+
 ```Java
 int[] arrA = {1, 2, 3};
 int[] arrB = {4, 5, 6};
@@ -83,21 +98,6 @@ for (int b : arrB) {
     print(b);
 }
 
-```
-
-> O(A + B)
-
-```JavaScript
-let array1 = [1, 2, 3];
-let array2 = [2, 3, 4];
-
-for (let i = 0; i < array1.length; i++) {
-    console.log(array1[i]);
-}
-
-for (let value of array2) {
-    console.log(value);
-}
 ```
 
 ### Multiply the Runtimes
