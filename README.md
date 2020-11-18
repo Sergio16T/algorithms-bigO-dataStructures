@@ -82,7 +82,7 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
 ### Add the Runtimes
 If your algorithm is in the form "do this, then, when you're all done, do that" then you add the run times.
 
-> O(A + B) --->  O(n)
+> O(A + B)
 
 ```JavaScript
 let array1 = [1, 2, 3];
@@ -97,7 +97,7 @@ for (let value of array2) {
 }
 ```
 
-> O(A + B) --->  O(n)
+> O(A + B)
 
 ```Java
 int[] arrA = {1, 2, 3};
@@ -116,7 +116,7 @@ for (int b : arrB) {
 ### Multiply the Runtimes
 If your algorithm is in the form "do this for each time you do that" then you multiply the runtimes.
 
-> 0(A * B) ---> Because both inputs are of same length O(n^2)
+> 0(A * B)
 
 ```JavaScript
 let array1 = [1, 2, 3];
@@ -129,7 +129,7 @@ for (let i = 0; i < array1.length; i++) {
 }
 ```
 
-> 0(A * B) ---> O(n^2)
+> 0(A * B)
 
 ``` Java
 //Example 1
