@@ -12,17 +12,17 @@
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
 
-// Time complexity 
+// Time complexity
 // Quadratic  O(n^2)
 
 var longestCommonPrefix = function(strs) {
-    if(!strs.length) return ""; 
-    for(let i = 0; i<= strs[0].length -1; i++ ) {
-        for(let str of strs) {
-            if(str[i] !== strs[0][i]) {
-                return str.slice(0, i); 
+    if (!strs.length) return "";
+    for (let i = 0; i <= strs[0].length - 1; i++) {
+        for (let str of strs) {
+            if (str[i] !== strs[0][i]) {
+                return str.slice(0, i);
             }
         }
     }
-    return strs[0]; 
+    return strs[0];
 };
