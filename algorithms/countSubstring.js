@@ -12,9 +12,9 @@ return the number of times the substring repeats within the string */
 const countSubstring = (substring, s) => {
     let count = 0;
     let length = s.length - substring.length;
-    for(let i = 0; i <= length; i++) {
+    for (let i = 0; i <= length; i++) {
         let subS = s.substring(i, i + substring.length);
-        if(subS === substring) {
+        if (subS === substring) {
             count++;
         }
     }

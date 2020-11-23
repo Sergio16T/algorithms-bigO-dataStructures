@@ -6,11 +6,11 @@ const binarySearch = (values, n) => {
     let left = 0;
     let right = values.length - 1;
 
-    while(left < right) {
+    while (left < right) {
         let midIndex = Math.floor((left + right)/2);
-        if(values[midIndex] === n) return midIndex;
+        if (values[midIndex] === n) return midIndex;
 
-        if(values[midIndex] < n) {
+        if (values[midIndex] < n) {
             left = midIndex + 1;
         } else {
             right = midIndex - 1;

@@ -1,14 +1,19 @@
-class QueueElement {
-    constructor(element, priority) {
-        this.element = element;
-        this.priority = priority
-    }
+// class QueueElement {
+//     constructor(element, priority) {
+//         this.element = element;
+//         this.priority = priority
+//     }
+// }
+function QueueElement() {
+    this.element = element;
+    this.priority = priority
 }
 
 class PriorityQueue {
     constructor() {
         this.items = [];
     };
+
     enQueue = (element, priority) => {
         let item = new QueueElement(element, priority);
 
