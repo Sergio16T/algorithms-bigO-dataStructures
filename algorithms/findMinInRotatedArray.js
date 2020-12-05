@@ -8,7 +8,7 @@ const rotatedArray = [4, 5, 6, 7, 1, 2 ,3];
 function findMin(array) {
     //create pointers for left and right (indices)
     let left = 0;
-    let right = array.length -1; // (1) in this example equals 6
+    let right = array.length - 1; // (1) in this example equals 6
 
     // cover edge cases
     if (array.length === 1) return array[0];
