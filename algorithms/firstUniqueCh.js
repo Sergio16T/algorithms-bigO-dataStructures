@@ -11,7 +11,7 @@ var firstUniqChar = function(s) {
     const map = {
         // ch: index
     }
-    for ( let i = 0; i < s.length; i++) {
+    for (let i = 0; i < s.length; i++) {
         let ch = s[i];
         if (ch in map) map[ch] = -1;
         else map[ch] = i;
