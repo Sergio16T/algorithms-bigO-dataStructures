@@ -31,4 +31,4 @@ const returnUniqueCharacters = (array) => {
 }
 
 
-console.log(returnUniqueCharacters(["a", "a", "b", "c", "b", "d"]));
+console.log(returnUniqueCharacters(["a", "a", "b", "c", "b", "d"])); // returns ['c', 'd']

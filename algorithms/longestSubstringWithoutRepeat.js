@@ -17,7 +17,7 @@
 // 4) then we return the max which we've been assigning a value as we add to our set
 
 // O(n) linear time complexity
-//Sliding Window Method
+// Sliding Window Method
 var lengthOfLongestSubstring = function(s) {
     let set = new Set();
     let left = 0;
