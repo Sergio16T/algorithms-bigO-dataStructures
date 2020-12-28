@@ -13,13 +13,13 @@ function sumAll(arr) {
     let max = Math.max(...arr);
     let min = Math.min(...arr);
     let sum = max + min;
-    let n = max;
-    while (n > min + 1) {
-      console.log(n);
-      sum += n - 1;
-      n--;
+    let n = max - 1;
+    while (n > min) {
+        sum += n;
+        n--;
     }
     return sum;
-  }
+}
 
-  sumAll([1, 4]); // returns 10
+const result = sumAll([1, 4]); // returns 10
+console.log(result);

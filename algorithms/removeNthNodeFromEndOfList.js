@@ -1,3 +1,5 @@
+//Given the head of a linked list, remove the nth node from the end of the list and return its head( referring to the head of the linked list).
+
 /*
 First we will add an auxiliary "dummy" node, which points to the list head.
 The "dummy" node is used to simplify some corner cases such as a list with only one node,
@@ -25,22 +27,22 @@ function ListNode(val, next) {
 // 7) return dummyListNode.next which is the head that has the nth node from end removed!
 
 var removeNthFromEnd = function(head, n) {
-    var dummyListNode = new ListNode(0); // 1
+    var dummyListNode = new ListNode(0); // 1 first create dummyNode to simplify handling edge cases
     dummyListNode.next = head;
     let length = 0;
     let first = head;
     while (first != null) {
-        length++; // 2
+        length++; // 2 iterate through the list to calculate the length which in example case is 4
         first = first.next;
     }
-    length -= n; //3
-    first = dummyListNode; // 4
+    length -= n; // 3 subtract n from length -- which in example case becomes 2
+    first = dummyListNode; // 4 reassign first to reference the dummyListNode -- dummy node starts @ 0 then goes to 1, 2, 3, 4, null
     while (length > 0) {
-        length --; //5
+        length --; //5 while loop runs twice with length = 2 after step 3 first variable node.val becomes equal to 1 then becomes 2 so now first is pointing at listNode with val 2
         first = first.next;
     }
-    first.next = first.next.next; // 6
-    return dummyListNode.next; //7
+    first.next = first.next.next; // 6 this is where we remove the nth node: we assign the next value of listNode with val 2 to be listNode 4
+    return dummyListNode.next; //7 return dummyListNode.next which is the head that has the nth node from end removed!
 };
 
 module.exports = removeNthFromEnd
