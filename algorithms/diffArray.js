@@ -5,6 +5,8 @@ Note
 You can return the array with its elements in any order.
 */
 
+// only want items in found in one of the two arrays but not both therefore test if either array does not include the item
+// if this condition passes then keep the item
 function diffArray(arr1, arr2) {
     let list = arr1.concat(arr2); // or let list = [...arr1, ...arr2];
     return list.filter(item => !arr1.includes(item) || !arr2.includes(item));
