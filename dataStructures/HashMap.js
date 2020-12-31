@@ -1,0 +1,30 @@
+// A.K.A. HashTable
+
+function HashTable() {
+    var table = [];
+    this.put = (key, value) => {
+        const position = generateHashCode(key);
+        table[position] = value;
+    }
+    this.get = (key) => {
+        return table[generateHashCode(key)];
+    }
+    this.remove = (key) => {
+        table[generateHashCode(key)] = undefined;
+    }
+}
+
+
+const generateHashCode = (key) => {
+    let hash = 5381;
+    for (let i = 0; i < key.length; i++) {
+        hash = hash * 33 + key.charCodeAt(i);
+    }
+    return hash % 1013;
+}
+
+let table = new HashTable();
+table.put("Apple", 123);
+console.log(table.get("Apple"));
+table.remove("Apple");
+console.log(table.get("Apple"));

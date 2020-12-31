@@ -22,10 +22,10 @@ var lengthOfLongestSubstring = function(s) {
     let set = new Set();
     let left = 0;
     let right = 0;
-    let max =0;
+    let max = 0;
     while (right < s.length) {
         let ch = s[right];
-        if(!set.has(ch)) {
+        if (!set.has(ch)) {
             set.add(ch);
             max = Math.max(max, set.size);
             right++;
