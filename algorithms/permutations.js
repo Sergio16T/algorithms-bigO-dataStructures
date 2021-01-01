@@ -1,4 +1,7 @@
 // recursive tree
+// O(n!) factorial
+// [1, 2, 3] --> 3 * 2 * 1 = 6 answers
+// [1, 2, 3, 4] --> 4 * 3 * 2 * 1 = 24 answers
 const permute = (nums, set = [], answers = []) => {
     if (!nums.length) answers.push([...set]);
     console.log('set', set)
