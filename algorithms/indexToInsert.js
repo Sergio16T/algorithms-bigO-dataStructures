@@ -12,4 +12,5 @@ function getIndexToInsert(arr, num) {
     return arr.length;
   }
 
-  getIndexToInsert([5, 3, 20, 3], 5);
+  const result = getIndexToInsert([5, 3, 20, 3], 5);
+  console.log(result);
