@@ -11,6 +11,7 @@ const permute = (nums, set = [], answers = []) => {
         set.push(nums[i]);
         permute(newNums, set, answers);
         console.log('end permute now pop')
+        console.log('answers', answers)
         // before moving on to next index in the tree
         // pop off the last remaining number to reach our base case and push answer
         set.pop();
