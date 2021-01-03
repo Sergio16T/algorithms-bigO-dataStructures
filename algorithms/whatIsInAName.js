@@ -8,7 +8,7 @@
 
 // O(n^2)
 function whatIsInAName(collection, source) {
-    // 1) loop through each the keys in the source object because both of those need to be in each
+    // 1) loop through each the keys in the source object because both of those key value pairs need to be in each
     // object for us to add this to our return value
     let arr = [];
     let keyCount = Object.keys(source).length;
@@ -26,7 +26,7 @@ function whatIsInAName(collection, source) {
   }
 
 // O(n^2)
-const whatIsInANameSolution2 = (collection, souce) => {
+const whatIsInANameSolution2 = (collection, source) => {
     var srcKeys = Object.keys(source);
 
     return collection.filter((obj) => {
