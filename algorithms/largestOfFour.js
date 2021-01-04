@@ -1,6 +1,6 @@
 function largestOfFour(arr) {
     return arr.map(subArray => {
-        return subArray.reduce((acc, currentValue) => acc > currentValue ? acc : currentValue);
+        return subArray.reduce((startValue, element) => startValue > element ? startValue : element);
     });
 }
 // map over the values in the array

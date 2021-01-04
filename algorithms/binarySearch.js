@@ -2,6 +2,9 @@
 Write function that takes input values(a sorted array) and n (an integer) and find the index of integer in sorted array;
 If the integer is not in the array return -1;
 */
+// binarySearch is optimal because we have a sorted Array as input
+// note: binarySearch does not work if the array is not sorted since the median can be anywhere and cutting the array in half could mean that you cut off the number you were searching for
+// O(log n)
 const binarySearch = (values, n) => {
     let left = 0;
     let right = values.length - 1;
