@@ -230,9 +230,18 @@ function recursiveFibo(n) {
 ```
 
 ```Java
-int fibo(int n) {
-    if (n < 2) return n;
-    return fibo(n - 1) + fibo(n - 2);
+public class Fibonacci {
+    public static Integer method(Integer n) {
+        if (n < 2) {
+            return n;
+        }
+        return method(n - 1) + method(n - 2);
+
+    }
+    public static void main(String[] args) {
+        Integer result = Fibonacci.method(3);
+        System.out.println(result);
+    }
 }
 ```
 

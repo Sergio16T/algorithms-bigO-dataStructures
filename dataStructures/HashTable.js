@@ -1,4 +1,3 @@
-// A.K.A. HashTable
 
 function HashTable() {
     var table = [];
