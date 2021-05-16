@@ -4,7 +4,7 @@
 //         this.priority = priority
 //     }
 // }
-function QueueElement() {
+function QueueElement(element, priority) {
     this.element = element;
     this.priority = priority
 }
@@ -17,12 +17,18 @@ class PriorityQueue {
     enQueue = (element, priority) => {
         let item = new QueueElement(element, priority);
 
+        /* loop through the items in queue and if we find an element with a priority higher than
+        the incoming element insert new element at that index. This happens by shifting the existing elements
+        whose index is equal to or greater than index over one to the right and placing that new element at desired index.
+        - JavaScript method `splice(startIndex, deleteCount, item)` can accomplish this
+        */
         for(let i = 0; i < this.items.length; i++) {
-            if(this.items[i].priority > item.priority) {
-                this.items.splice(i, 0, item);
+            if (this.items[i].priority > item.priority) {
+                this.items.splice(i, 0, item); // insert incoming element at index (which will move existing element at index one over to right as well as the remaining items in array)
                 return;
             }
         }
+        // new item can be added to end of queue
         this.items.push(item);
     }
     deQueue = () => {
