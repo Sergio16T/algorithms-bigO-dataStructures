@@ -67,6 +67,7 @@ function LinkedList() {
         let current = head; // current is a pointer variable to point to current node in list
         let node = new Node(element); // initialize new node
         let index = 0;
+        let previous;
 
         // 2) If position is 0 insert as head of list.
         if (position === 0) {
