@@ -22,6 +22,12 @@ do not need to shift elements over when adding or removing them as you do in an 
 if we want to access an element from the middle we need to start at the beginning the *head* of the linkedlist and
 iterate through the list until we find the desired element
 
+- Arrays have O(1) random access(better for searching for elements), but are really expensive to add stuff onto or remove stuff from.
+(Because each element in the array has to be moved to the right or left depending on addition and removal of elements at a given index)
+
+- Linked Lists have Better Performance when inserting and deleting elements
+
+
 Real Word Examples
 * Conga Line
 * Scavenger Hunt
@@ -95,9 +101,14 @@ function LinkedList() {
     this.isEmpty = function() {};
     this.size = function() {};
     this.toString = function() {};
-    this.print = function() {};
+    this.print = function() {
+        console.log(head);
+    };
 }
 
 let list = new LinkedList();
 list.append(5);
 list.append(10);
+list.insert(1, 8);
+
+list.print();
