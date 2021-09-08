@@ -31,12 +31,14 @@ var removeNthFromEnd = function(head, n) {
     dummyListNode.next = head;
     let length = 0;
     let first = head;
+
     while (first != null) {
         length++; // 2 iterate through the list to calculate the length which in example case is 4
         first = first.next;
     }
     length -= n; // 3 subtract n from length -- which in example case becomes 2
     first = dummyListNode; // 4 reassign first to reference the dummyListNode -- dummy node starts @ 0 then goes to 1, 2, 3, 4, null
+
     while (length > 0) {
         length --; //5 while loop runs twice with length = 2 after step 3 first variable node.val becomes equal to 1 then becomes 2 so now first is pointing at listNode with val 2
         first = first.next;

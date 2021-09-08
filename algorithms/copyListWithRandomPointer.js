@@ -18,8 +18,7 @@
  */
 
 /* Deep copies the linked list (along with random pointers) */
-var copyRandomList = function(originalHead)
-{
+var copyRandomList = function(originalHead) {
     // Handle the corner case
     if (!originalHead) return originalHead;
 
@@ -41,8 +40,7 @@ var copyRandomList = function(originalHead)
     nodeJustBelow.set(oldHead,newHead);
 
     // Check whether the next node exists or not
-    while (oldHead.next)
-    {
+    while (oldHead.next) {
         // First, create the next node in the cloned list.
         newHead.next = new Node(oldHead.next.val, null, null);
 
@@ -61,8 +59,7 @@ var copyRandomList = function(originalHead)
     newHead = clonedHead;
 
     // As long as both the lists exist, correct the random pointers
-    while (oldHead && newHead)
-    {
+    while (oldHead && newHead) {
         // Traverse the random pointer of the original list and go down vertically and connect it
         newHead.random = oldHead.random ? nodeJustBelow.get(oldHead.random) : null;
 
