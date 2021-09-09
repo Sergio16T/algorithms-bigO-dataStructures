@@ -1,10 +1,10 @@
 /*
 Sample LinkedList
-list1 = {
+list1 = ListNode {
     val: 1,
-    next: {
+    next: ListNode {
         val: 2,
-        next: {
+        next: ListNode {
             val: 3,
             next: null
         }

@@ -94,13 +94,14 @@ reverseLinkedList(new ListNode(null, null));
 
 /*
 Keep track of 3 nodes the head node, previous node, and the next node
-[1, 2, 3, null]
+
 1) Create temp variable to store head.next value
 2) Switch Head's next node to value of the previous node
 3) Assign Previous to the Head node
 4) Assign Head to whatever is next(temp var)
 5) Repeat
 */
+
 const reverseList = (head) => {
     let prev = null;
 
