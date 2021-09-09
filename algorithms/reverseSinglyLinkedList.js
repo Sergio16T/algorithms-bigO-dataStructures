@@ -6,11 +6,11 @@ function ListNode(val, next) {
     this.next = next;
 }
 
-list = {
+list = ListNode {
     val: 1,
-    next: {
+    next: ListNode {
         val: 2,
-        next: {
+        next: ListNode {
             val: 3,
             next: null
         }
@@ -95,30 +95,29 @@ reverseLinkedList(new ListNode(null, null));
 /*
 Keep track of 3 nodes the head node, previous node, and the next node
 [1, 2, 3, null]
-1) Switch Head's next reference to point to previous
-2) Assign Previous Reference to the Head node
-3) Assign Head reference to what ever is next
-4) Repeat
+1) Create temp variable to store head.next value
+2) Switch Head's next node to value of the previous node
+3) Assign Previous to the Head node
+4) Assign Head to whatever is next(temp var)
+5) Repeat
 */
 const reverseList = (head) => {
     let prev = null;
 
     while (head) {
-        let next = head.next; // temp variable to store next value
-        // 1) Switch next node with previous node
+        let next = head.next; // 1) temp variable to store next value
+        // 2) head's next node is assigned value of previous
         head.next = prev; // with first iteration previous node doesn't exist so we assign it to value of null
 
-        // 2) assign prev node to the value of head node of linked list
+        // 3) assign prev to the value of head node/current node of linked list
         prev = head;
-        // 3) assign the head to the next node in list
+        // 4) assign the head to the next node in list
         head = next;
     }
 
     return prev;
 }
+
 let list2 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
 
 console.log("Approach 2: ", reverseList(list2))
-
-// [1, 2, 3, null]
-// [2, 1, 3, null]
