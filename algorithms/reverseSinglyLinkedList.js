@@ -17,14 +17,17 @@ list = ListNode {
     }
 };
 
-A) Approach 1:
+A) Brute Force Solution:
     1) Convert LinkedList to Array of values
     2) Reverse Array
     3) Convert back to LinkedList
     O(3n)
 
-B) Approach 2:
-    Use a next, current, and previous pointer and update the list using the pointers as we iterate through the list
+B) Optimized Solution:
+    1) Use a temp variable to store next node in list
+    2) Keep track of current head node by updating the head node argument in function as we iterate
+    3) Maintain a variable reversed where we construct the reversed list with the previous values
+    4) Update the reversed list using the pointers as we iterate through the original list
     O(n)
 
 
@@ -33,7 +36,40 @@ Approach B is fastest requires 1 iteration
 
 */
 
-// Approach 1: BIG O : O(3n) --> O(n)
+/*
+Optimized Solution O(n)
+Keep track of 3 nodes the head node, previous node, and the next node
+
+1) Create temp variable to store next node value
+2) Switch Current head's next node to value of the reversed list we are maintaining
+3) Assign reversed list to the Head node which now has most recent head as value with next pointing to previous nodes in reverse order
+4) Assign Head to whatever is next(temp var) which contains the next node in the list
+5) Repeat
+*/
+
+const reverseList = (head) => {
+    let reversed = null;
+
+    while (head) {
+        let next = head.next; // 1) temp variable to store next value
+        // 2) head's next node is assigned value of current reversed linked list
+        head.next = reversed; // with first iteration previous node doesn't exist so we assign it to value of null
+
+        // 3) assign reversed to the value of head node/current node of linked list
+        reversed = head;
+        // 4) assign the head to the next node in list
+        head = next;
+    }
+
+    return reversed;
+}
+// [1 2 3] --> [2 3 null] -->
+let list2 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
+
+console.log("Approach B: ", reverseList(list2))
+
+
+// Brute Force Solution O(3n) --> O(n)
 const reverseLinkedList = (list) => {
     if (!list) {
         return list;
@@ -85,40 +121,7 @@ function ListNode(val, next) {
 
 let list = new ListNode(1, new ListNode(2, new ListNode(3, null)));
 
-let result = reverseLinkedList(list);
-console.log('Approach 1: ', result);
+// let result = reverseLinkedList(list);
+// console.log('Approach A: ', result);
 
-reverseLinkedList(new ListNode(null, null));
-
-// Approach 2 Big O(n)
-
-/*
-Keep track of 3 nodes the head node, previous node, and the next node
-
-1) Create temp variable to store head.next value
-2) Switch Head's next node to value of the previous node
-3) Assign Previous to the Head node
-4) Assign Head to whatever is next(temp var)
-5) Repeat
-*/
-
-const reverseList = (head) => {
-    let prev = null;
-
-    while (head) {
-        let next = head.next; // 1) temp variable to store next value
-        // 2) head's next node is assigned value of previous
-        head.next = prev; // with first iteration previous node doesn't exist so we assign it to value of null
-
-        // 3) assign prev to the value of head node/current node of linked list
-        prev = head;
-        // 4) assign the head to the next node in list
-        head = next;
-    }
-
-    return prev;
-}
-
-let list2 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
-
-console.log("Approach 2: ", reverseList(list2))
+// reverseLinkedList(new ListNode(null, null));
