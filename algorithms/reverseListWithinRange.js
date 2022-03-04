@@ -45,22 +45,43 @@ const reverseBetween = (head, left, right) => {
     } else { // connection is null in case where left is 1 since first while loop did not run
         head = prev;
     }
-    // update tail to point ti currentNode
+    // update tail to point to currentNode
 
     tail.next = currentNode;
     return head;
 }
 
+/*
+ Multiple Ways of logging nested objects below
+ - node.js util.inspect()
+ - toString method override - function and class syntax
+*/
 
-function ListNode(val, next) {
-    this.val = val;
-    this.next = next;
+// function ListNode(val, next) {
+//     this.val = val;
+//     this.next = next;
+// }
+
+// ListNode.prototype.toString = function() {
+//     return `{ val: ${this.val}, next: ${this.next} }`;
+// }
+
+class ListNode {
+    constructor(val, next) {
+        this.val = val;
+        this.next = next;
+    }
+
+    toString = () => {
+        return `ListNode { val: ${this.val}, next: ${this.next} }`;
+    }
 }
-
 
 let list = new ListNode(7, new ListNode(8, new ListNode(9, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, null)))))));
 
-// let result = reverseBetween(list, 3, 6);
+let result = reverseBetween(list, 3, 6);
+
+console.log(`${result}`);
 
 // console.log(util.inspect(result, { showHidden: true, depth: null, colors: true }));
 
@@ -72,4 +93,4 @@ let case2 = new ListNode(5, null);
 let case3 = new ListNode(5, new ListNode(3, null));
 
 let case3Result = reverseBetween(case3, 1, 1);
-console.log(case3Result);
+// console.log('case3', case3Result);

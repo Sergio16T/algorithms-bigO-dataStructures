@@ -1,7 +1,7 @@
 // Remove duplicates from an array
 
 const removeDuplicates = (array) => {
-    return array.reduce((startValue, element) => startValue.includes(element) ? startValue : [...startValue, element], []);
+    return array.reduce((previousValue, element) => previousValue.includes(element) ? previousValue : [...previousValue, element], []);
 }
 
 const removeDuplicatesWithSet = (array) => {
