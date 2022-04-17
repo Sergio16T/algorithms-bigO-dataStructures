@@ -5,9 +5,13 @@
 const memoFib = function() {
     let memo = {}
     return function fib(n) {
-        if (n in memo) return memo[n];
-        else if (n <= 1) memo[n] = n;
-        else memo[n] = fib(n - 1) + fib(n - 2);
+        if (n in memo) {
+            return memo[n];
+        } else if (n <= 1) {
+            memo[n] = n;
+        } else {
+            memo[n] = fib(n - 1) + fib(n - 2);
+        }
         return memo[n]
     }
 }
@@ -22,14 +26,14 @@ const memoFib = function() {
 // Recursive Fibonacci without Memoization
 //  O(2^n) or exponential note: O(2^n) denotes an algorithm whose growth doubles with each addition to the input data set.
 function recursiveFibo(n) {
-    if (n < 2) return n;
+    if (n < 2) { return n; }
     return recursiveFibo(n-1) + recursiveFibo(n-2);
 }
 
 // Fibonacci Linear O(n) time complexity solutions
 // 1)
 function fibo(n) {
-    if (n < 2) return n;
+    if (n < 2) { return n; }
     let array = [0, 1];
 
     for (let i = 2; i <= n; i++) {

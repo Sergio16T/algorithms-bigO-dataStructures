@@ -23,3 +23,15 @@ function sumAll(arr) {
 
 const result = sumAll([1, 4]); // returns 10
 console.log(result);
+
+
+function sumAll2(arr) {
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  let sum = max + min;
+
+  for (let i = min + 1; i < max; i++) {
+    sum += i;
+  }
+  return sum;
+}

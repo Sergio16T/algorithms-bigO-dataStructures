@@ -14,6 +14,7 @@ class PriorityQueue {
         this.items = [];
     };
 
+    // Note: Highest priority is 1
     enQueue = (element, priority) => {
         let item = new QueueElement(element, priority);
 

@@ -12,7 +12,7 @@ const reverseBetween = (head, left, right) => {
     if (!head) {
         return null;
     }
-    let prev = null
+    let prev = null,
         currentNode = head;
 
     // args -> [7, 8, 9, 1, 2, 3, 4], 3, 6

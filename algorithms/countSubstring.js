@@ -3,8 +3,8 @@ return the number of times the substring repeats within the string */
 
 // tap tapwatertap
 // string length = 11
-// 8th index = t
-// 8 + 3 == 11
+// Determine index to iterate to by subtracting length of substring from string and iterate up to including that index
+// 11 - 3 = 8 --> final start index to check for substring
 // iterate through to the 8th index including the 8th index
 // comparing the substring with the start index being i in the iteration and
 // the end index being i + substring.length
