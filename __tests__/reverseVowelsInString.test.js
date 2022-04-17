@@ -1,4 +1,4 @@
-const reverseVowels = require("../algorithms/Arrays&Strings/reverseVowelsInString");
+const reverseVowels = require("../algorithms/Arrays|Strings/reverseVowelsInString");
 
 describe('it reverses vowels in string', ()=> {
     it('It reverses hello to holle', ()=> {

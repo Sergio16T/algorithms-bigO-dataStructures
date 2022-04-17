@@ -1,4 +1,4 @@
-const { isValid } = require("../algorithms/Stacks&Queues/validParentheses");
+const { isValid } = require("../algorithms/Stacks|Queues/validParentheses");
 
 describe('Test validParentheses solution', () => {
     it("evaluates to true when input is '[]'", ()=> {

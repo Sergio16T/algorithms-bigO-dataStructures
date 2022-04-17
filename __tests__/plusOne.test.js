@@ -1,4 +1,4 @@
-const plusOne =  require('../algorithms/Arrays&Strings/plusOne');
+const plusOne =  require('../algorithms/Arrays|Strings/plusOne');
 
 describe('it tests plusOne solution', () => {
     it('adds 1 to end of array when last digit less than 9', () => {
