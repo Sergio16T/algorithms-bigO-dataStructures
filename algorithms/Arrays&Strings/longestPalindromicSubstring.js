@@ -24,16 +24,18 @@ let longestPalindrome2 = function(s) {
     // start at s.length and exclude when using substring method (inclusive, exclusive)
     for (let i = s.length; i > 0; i--) {
         let left = 0, right = i;
+
         while (right <= s.length) {
             let substr = s.substring(left, right);
+
             if (isPalindrome2(substr)) {
                 return substr;
-            }
-            else {
+            } else {
                 left++;
                 right++;
             }
         }
+
     }
     return "";
 }
