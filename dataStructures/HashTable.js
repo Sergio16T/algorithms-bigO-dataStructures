@@ -1,6 +1,5 @@
-// Two Different Types of HasTables
-// HashSet & HashMap
-// Todo show logic for handling collision - linkedList
+// HashSet & HashMap @Todo add notes
+// @Todo show logic for handling collision - linkedList
 
 function HashTable() {
     var table = [];
