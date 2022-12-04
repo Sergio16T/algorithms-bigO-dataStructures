@@ -1,3 +1,6 @@
+// Two Different Types of HasTables
+// HashSet & HashMap
+// Todo show logic for handling collision - linkedList
 
 function HashTable() {
     var table = [];
@@ -24,6 +27,46 @@ const generateHashCode = (key) => {
 
 let table = new HashTable();
 table.put("Apple", 123);
-console.log(table.get("Apple"));
+// console.log(table.get("Apple"));
 table.remove("Apple");
-console.log(table.get("Apple"));
+// console.log(table.get("Apple"));
+
+
+
+var MyHashSet = function() {
+     this.set = [];
+};
+
+MyHashSet.prototype.add = function(key) {
+    const position = generateHashCode(key);
+    this.set[position] = key;
+};
+
+MyHashSet.prototype.get = function(key) {
+    return this.set[generateHashCode(key)];
+}
+
+MyHashSet.prototype.remove = function(key) {
+    return this.set[generateHashCode(key)] = undefined;
+}
+
+MyHashSet.prototype.print = function(key) {
+    console.log(this.set);
+};
+
+MyHashSet.prototype.contains = function(key) {
+    return this.set[generateHashCode(key)] !== undefined;
+};
+
+const set = new MyHashSet();
+set.add(1);
+
+set.print();
+
+console.log(set.get(1));
+
+set.remove(1);
+
+set.print();
+
+console.log(set.contains(1));
