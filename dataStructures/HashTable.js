@@ -1,5 +1,4 @@
-// Two Different Types of HashTables
-// HashSet & HashMap
+// HashSet & HashMap @Todo add notes
 // @Todo show logic for handling collision - linkedList
 
 function HashTable() {
