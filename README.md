@@ -1,5 +1,6 @@
 <div align="center">
-    <img src="https://res.cloudinary.com/dddnhychw/image/upload/v1598718831/Icons/JS_eqbfi5.png" alt="JavaScript Banner" width="500"/>
+    <h1>JavaScript Algorithms & Data Structures </h1>
+    <img src="./logo.svg" alt="JavaScript Banner" width="200"/>
 </div>
 
 ## Summary
