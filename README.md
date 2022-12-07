@@ -1,6 +1,6 @@
 <div align="center">
     <h1>JavaScript Algorithms & Data Structures </h1>
-    <img src="./logo.svg" alt="JavaScript Banner" width="200"/>
+    <img src="./logo.svg" alt="JavaScript Banner" width="250px"/>
 </div>
 
 With this respository, I am solving Algorithms in JavaScript with notes including Big O time complexity analyisis. I am also writing tests for my solutions with Jest.
