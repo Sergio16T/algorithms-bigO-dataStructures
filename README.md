@@ -1,9 +1,9 @@
 <div align="center">
     <h1>JavaScript Algorithms & Data Structures </h1>
-    <img src="./logo.svg" alt="JavaScript Banner" width="250px"/>
+    <img src="./assets/logo.svg" alt="JavaScript Banner" width="250px"/>
 </div>
 
-With this respository, I am solving Algorithms in JavaScript with notes including Big O time complexity analyisis. I am also writing tests for my solutions with Jest.
+With this respository, I am solving Algorithms and implementing Data Structures in JavaScript with notes including Big O time complexity analyisis.  I am also writing tests for my solutions with Jest.
 
 ### Core Concepts
 - Iterative vs Recursive
@@ -21,7 +21,7 @@ With this respository, I am solving Algorithms in JavaScript with notes includin
 
 ## Big O Notes Table of Contents
 
-
+- [Run Times](#run-times)
 - [Drop the Constants](#drop-the-constants)
 - [Drop Non Dominant Terms](#drop-non-dominant-terms)
 - [Multi Part Algorithms](#multi-part-algorithms-add-vs-multiply)
@@ -39,6 +39,14 @@ With this respository, I am solving Algorithms in JavaScript with notes includin
 - O(log n) Logarithmic Time
 - O(n log n) Linearithmic Time
 - O(n!) Factorial Time
+
+*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
+
+<img src="./assets/big-o-graph.png" width="70%"/>
+
+Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+
 
 ## Drop The Constants
 
