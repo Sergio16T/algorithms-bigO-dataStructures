@@ -43,7 +43,7 @@ With this respository, I am solving Algorithms and implementing Data Structures 
 *Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
 On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
 
-<img src="./assets/big-o-graph.png" width="80%"/>
+<img src="./assets/big-o-graph.png" width="90%"/>
 
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
