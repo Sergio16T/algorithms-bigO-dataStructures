@@ -14,5 +14,6 @@ Ideally, the hash function will assign each key to a unique bucket, but most has
 
 <img src="./images/hash-table.svg" style="margin-bottom: 25px"/>
 
-Hash collision resolved by separate chaining
+<div> <p> Hash collision resolved by separate chaining <p> </div>
+
 <img src="./images/hash-table-collision.svg" style="margin-bottom: 25px"/>
