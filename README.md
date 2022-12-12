@@ -9,10 +9,11 @@ With this respository, I am solving Algorithms and implementing Data Structures 
 - Iterative vs Recursive
 - Variables/Pointers Manipulation
 - Binary Search
-- Hashmap
-- Stack
+- [Hash Table](./dataStructures/hash-table/)
+- [Stack](./dataStructures/stack/)
 - Array
-- Linked List
+- [Linked List](./dataStructures/linked-list/)
+- Doubly Linked List
 - Sorting
 - Depth First Search
 - Breadth First Search
