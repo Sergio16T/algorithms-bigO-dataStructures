@@ -39,18 +39,16 @@ ListNode {
 
 ### LinkedList vs Array
 
-One of the benefits of LinkedList over a conventional array is that we
-do not need to shift elements over when adding or removing them as you do in an array.
+One of the benefits of LinkedList over a conventional array is that we do not need to shift elements over when adding or removing them as you do in an array.
 
-However we do need do use pointers when working with LinkedList which requires some extra attention
+However we do need do use pointers when working with LinkedList which requires some extra attention.
 
-Another detail in the array is that we can directly access any element at any position. With a LinkedList
-if we want to access an element from the middle we need to start at the beginning the *head* of the linkedlist and
-iterate through the list until we find the desired element
+Another detail in the array is that we can directly access any element at any position O(1). With a Linked List
+if we want to access an element from the middle we need to start at the beginning/the *head* of the Linked List and iterate through the list until we find the desired element.
 
 Arrays have O(1) random access(better for searching for elements), but are really expensive to add stuff onto or remove stuff from. (Because each element in the array has to be moved to the right or left depending on addition and removal of elements at a given index)
 
-Linked Lists have Better Performance when inserting and deleting elements
+Linked Lists have better performance when inserting and deleting elements
 
 
 ### Real Word Examples
