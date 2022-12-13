@@ -9,18 +9,30 @@ With this respository, I am solving Algorithms and implementing Data Structures 
 - Iterative vs Recursive
 - Variables/Pointers Manipulation
 - Binary Search
-- [Hash Table](./dataStructures/hash-table/)
-- [Stack](./dataStructures/stack/)
-- Array
-- [Linked List](./dataStructures/linked-list/)
-- Doubly Linked List
 - Sorting
 - Depth First Search
 - Breadth First Search
 - Memoization
 
+### Data Structures
+In computer science, a data structure is a data organization, management, and storage format that is usually chosen for efficient access to data.
 
-## Big O Notes Table of Contents
+- Array
+- [Hash Table](./dataStructures/hash-table/)
+- [Stack](./dataStructures/stack/)
+- [Queue](./dataStructures/queue/)
+- [Priority Queue](./dataStructures/priority-queue/)
+- [Linked List](./dataStructures/linked-list/)
+- [Doubly Linked List](./dataStructures/doubly-linked-list/)
+- Tree
+    - Binary Search Tree
+    - AVL Tree
+    - Red-Black Tree
+    - Segment Tree - with min/max/sum range queries examples
+    - Fenwick Tree (Binary Indexed Tree)
+- Graph
+
+## Big O Notation & Time Complexity
 
 - [Run Times](#run-times)
 - [Drop the Constants](#drop-the-constants)
