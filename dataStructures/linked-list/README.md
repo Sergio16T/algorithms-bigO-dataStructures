@@ -1,10 +1,10 @@
 # Linked List
 
-In computer science, a **linked list** store a sequential collection of elements but unlike arrays the elements are not placed contiguously in memory. Each element consists of a node that stores the element itself and also a reference (a.k.a. pointer or link) to the next element in the list.
+In computer science, a **linked list** stores a sequential collection of elements but unlike arrays the elements are not placed contiguously in memory. Each element consists of a node that stores the element itself and also a reference (a.k.a. pointer or link) to the next element in the list.
 
 This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration.
 
-A drawback of linked lists is that access time is linear O(n). Faster access, O(1) is not feasible. Arrays have O(n) performance for access compared to linked lists O(n).
+A drawback of linked lists is that access time is linear O(n). Faster access, O(1) is not feasible. Arrays have O(1) performance for access compared to linked lists O(n).
 
 
 ## Example
