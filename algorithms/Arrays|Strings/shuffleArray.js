@@ -18,9 +18,9 @@ Solution.prototype.reset = function() {
  *
  */
 Solution.prototype.shuffle = function() {
-     return this.numbers.map(x => ({value: x, random: Math.random()}))
-    .sort((a, b) => a.random - b.random)
-    .map(x => x.value);
+    return this.numbers.map(x => ({ value: x, random: Math.random() }))
+        .sort((a, b) => a.random - b.random)
+        .map(x => x.value);
 };
 
 

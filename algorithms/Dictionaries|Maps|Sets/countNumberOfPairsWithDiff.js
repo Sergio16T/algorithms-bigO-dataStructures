@@ -53,7 +53,7 @@ const findPairsWithMap = (nums, diff) => {
                 count+=1;
             }
         } else {
-            if (map.get(number) > 1) count +=1;
+            if (map.get(number) > 1) { count +=1; }
         }
 
 
@@ -93,12 +93,12 @@ const findPairs = (nums, diff) => {
         let number = Number(keySet[i]);
         let lookUpNum = number + diff;
 
-      if (diff !== 0 ) {
+        if (diff !== 0 ) {
             if (lookUpNum in dictionary) {
                 count+=1;
             }
         } else {
-            if (dictionary[number] > 1) count +=1;
+            if (dictionary[number] > 1) {count +=1;}
         }
     }
 
@@ -112,12 +112,12 @@ function initializeDict(nums) {
         if (number in dictionary) {
             dictionary[number] += 1
         } else {
-             dictionary[number] = 1
+            dictionary[number] = 1
         }
     });
     return dictionary;
 }
 
 
-let answer = findPairs([1,2,4,4,3,3,0,9,2,3], 3);
+let answer = findPairs([1, 2, 4, 4, 3, 3, 0, 9, 2, 3], 3);
 console.log("answer: ", answer);

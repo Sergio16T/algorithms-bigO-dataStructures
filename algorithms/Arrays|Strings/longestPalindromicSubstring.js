@@ -54,14 +54,14 @@ let isPalindrome2 = function(s) {
     return true;
 }
 
-
-// Solution 1 First Attempt -- Con -- will time out -- will take a long time to go through the entire string with large inputs
-// 1) start at left and move to right and check if palindrome at each index of string
-// 2) as you are moving to the right if a palindrome is found
-    // - check if the palindrome is longer length then current longest if it is longer -- assign the longest string to that palindrome
-// 3) continue to end of string
-// 4) move left pointer over 1 and repeat the process
-
+/*
+Solution 1 First Attempt -- Con -- will time out -- will take a long time to go through the entire string with large inputs
+1) start at left and move to right and check if palindrome at each index of string
+2) as you are moving to the right if a palindrome is found check if the palindrome is longer length
+then the current longest if it is longer -- assign the longest string to that palindrome
+3) continue to end of string
+4) move left pointer over 1 and repeat the process
+*/
 const longestPalindrome = function(s) {
     let longest = "";
     let left = 0;

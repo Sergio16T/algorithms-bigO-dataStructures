@@ -3,16 +3,20 @@
     <img src="./assets/logo.svg" alt="JavaScript Banner" width="250px"/>
 </div>
 
-With this respository, I am solving Algorithms and implementing Data Structures in JavaScript with notes including Big O time complexity analyisis.  I am also writing tests for my solutions with Jest.
+This repository contains solutions to Algorithms and implementations of Data Structures written in JavaScript with notes including Big O time complexity analyisis.
 
 ### Core Concepts
-- Iterative vs Recursive
+- [Data Structures](#data-structures)
+- [Algorithms](#algorithms)
+- [Big O Notation And Time Complexity](#big-o-notation-and-time-complexity)
+<!-- - Iterative vs Recursive
 - Variables/Pointers Manipulation
 - Binary Search
 - Sorting
 - Depth First Search
 - Breadth First Search
 - Memoization
+-->
 
 ## Data Structures
 In computer science, a data structure is a data organization, management, and storage format that is usually chosen for efficient access to data.
@@ -32,7 +36,18 @@ In computer science, a data structure is a data organization, management, and st
     - Fenwick Tree (Binary Indexed Tree)
 - Graph
 
-## Big O Notation & Time Complexity
+
+## Algorithms
+An algorithm is a set of instructions, used to solve problems or perform tasks.
+
+- Search
+    - Binary Search
+    - Linear Search
+- Sorting
+- Depth First Search
+- Breadth First Search
+
+## Big O Notation And Time Complexity
 
 - [Run Times](#run-times)
 - [Drop the Constants](#drop-the-constants)

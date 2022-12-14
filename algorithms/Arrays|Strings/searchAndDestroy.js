@@ -10,6 +10,6 @@ function destroyer() {
         array = array.filter(value => value !== item);
     });
     return array;
-  }
+}
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3); // returns [1, 1]

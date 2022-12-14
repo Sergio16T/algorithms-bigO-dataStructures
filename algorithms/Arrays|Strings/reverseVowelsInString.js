@@ -16,7 +16,7 @@ const reverseVowels = function(s) {
         "o":"o",
         "O": "O",
         "u":"u",
-        "U": "U"
+        "U": "U",
     };
     let indices = [];
     let vowels = [];
@@ -29,14 +29,14 @@ const reverseVowels = function(s) {
     }
     vowels = reverseArray(vowels);
     for (let j = 0; j < vowels.length; j++) {
-       let index = indices[j];
-       s[index] = vowels[j];
+        let index = indices[j];
+        s[index] = vowels[j];
     }
     return s.join("");
 };
 
 function reverseArray(array) {
-       for (let i = 0; i < Math.floor(array.length/2); i++) {
+    for (let i = 0; i < Math.floor(array.length/2); i++) {
         let temp= array[i];
         array[i] = array[array.length - 1 - i];
         array[array.length - 1 - i] = temp;

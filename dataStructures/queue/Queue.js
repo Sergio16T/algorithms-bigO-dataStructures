@@ -4,25 +4,25 @@ class Queue {
         this.items = [];
     }
 
-    enQueue = (element) => {
+    enQueue(element) {
         this.items.push(element);
     }
-    deQueue = () => {
+    deQueue() {
         return this.items.shift();
     }
-    firstItem = () => {
+    firstItem() {
         return this.items[0];
     }
-    isEmpty = () => {
+    isEmpty() {
         return this.items.length == 0;
     }
-    clear = () => {
+    clear() {
         this.items = [];
     }
-    size = () => {
+    size() {
         return this.items.length;
     }
-    print = () => {
+    print() {
         console.log(this.items.toString());
     }
 }

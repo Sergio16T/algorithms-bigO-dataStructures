@@ -26,12 +26,12 @@ console.log(result);
 
 
 function sumAll2(arr) {
-  let max = Math.max(...arr);
-  let min = Math.min(...arr);
-  let sum = max + min;
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+    let sum = max + min;
 
-  for (let i = min + 1; i < max; i++) {
-    sum += i;
-  }
-  return sum;
+    for (let i = min + 1; i < max; i++) {
+        sum += i;
+    }
+    return sum;
 }

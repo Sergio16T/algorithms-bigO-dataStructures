@@ -5,6 +5,7 @@
   "main": "",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^8.29.0",
     "jest": "^29.3.1"
   },
   "scripts": {

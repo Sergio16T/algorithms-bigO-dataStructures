@@ -2,11 +2,11 @@
 // Return a deep copy of the list
 
 //  Definition for a Node.
- function Node(val, next, random) {
+function Node(val, next, random) {
     this.val = val;
     this.next = next;
     this.random = random;
- };
+}
 
 /* Terminology ------------
  * 1) originalHead represents the head of the original_head. It is never modified.
@@ -20,7 +20,7 @@
 /* Deep copies the linked list (along with random pointers) */
 var copyRandomList = function(originalHead) {
     // Handle the corner case
-    if (!originalHead) return originalHead;
+    if (!originalHead) { return originalHead; }
 
     // Create the head of the cloned linked list and store its reference permanently
     var clonedHead = new Node(originalHead.val, null, null);
@@ -37,7 +37,7 @@ var copyRandomList = function(originalHead) {
     /* Node to Node mapping is compulsory(a must) to deal with duplicates in the linked list */
 
     // Link the nodes vertically
-    nodeJustBelow.set(oldHead,newHead);
+    nodeJustBelow.set(oldHead, newHead);
 
     // Check whether the next node exists or not
     while (oldHead.next) {
@@ -49,7 +49,7 @@ var copyRandomList = function(originalHead) {
         oldHead = oldHead.next;
 
         // After you've moved to the newly created node, connect it vertically
-        nodeJustBelow.set(oldHead,newHead);
+        nodeJustBelow.set(oldHead, newHead);
     }
 
     /* The linked list has been cloned correctly (except the random pointers) */
@@ -86,14 +86,14 @@ var copyRandomList = function(originalHead) {
 // 4) In JavaScript, scalar primitive values (Number, String, Boolean, undefined, null, Symbol) are immutable and
 // compound values (Object, Array) are mutable
 
-var flash = [8,8,8];
+var flash = [8, 8, 8];
 var quicksilver = flash;   //assign-by-reference
 quicksilver.push(0);
 //console.log(flash);        //[8,8,8,0]
 //console.log(quicksilver);  //[8,8,8,0]
 
 // objects work the same way
-var objectExample = {a: 1};
+var objectExample = { a: 1 };
 
 var reference = objectExample;
 

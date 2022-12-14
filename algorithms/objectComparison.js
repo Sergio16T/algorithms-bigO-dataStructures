@@ -14,6 +14,7 @@ function deepEqual(object1, object2) {
         const val1 = object1[key];
         const val2 = object2[key];
         const areObjects = isObject(val1) && isObject(val2);
+
         if (areObjects && !deepEqual(val1, val2) || !areObjects && val1 !== val2) {
             return false;
         }
@@ -48,14 +49,14 @@ function shallowEqual(object1, object2) {
 const hero1 = {
     name: 'Batman',
     address: {
-        city: 'Gotham'
-    }
+        city: 'Gotham',
+    },
 };
 const hero2 = {
     name: 'Batman',
     address: {
-        city: 'Gotham'
-    }
+        city: 'Gotham',
+    },
 };
 
 const referencialEquality = hero1 === hero1;
@@ -69,14 +70,14 @@ console.log(shallowEqual(hero1, hero2)); // => false
 
 const hero3 = {
     name: 'Batman',
-    realName: 'Bruce Wayne'
+    realName: 'Bruce Wayne',
 };
 const hero4 = {
     name: 'Batman',
-    realName: 'Bruce Wayne'
+    realName: 'Bruce Wayne',
 };
 const hero5 = {
-    name: 'Joker'
+    name: 'Joker',
 };
 
 console.log(shallowEqual(hero3, hero4)); // => true

@@ -12,10 +12,10 @@ function QueueElement(element, priority) {
 class PriorityQueue {
     constructor() {
         this.items = [];
-    };
+    }
 
     // Note: Highest priority is 1
-    enQueue = (element, priority) => {
+    enQueue(element, priority) {
         let item = new QueueElement(element, priority);
 
         /* loop through the items in queue and if we find an element with a priority higher than
@@ -32,22 +32,22 @@ class PriorityQueue {
         // new item can be added to end of queue
         this.items.push(item);
     }
-    deQueue = () => {
+    deQueue() {
         return this.items.shift();
     }
-    firstItem = () => {
+    firstItem() {
         return this.items[0];
     }
-    isEmpty = () => {
+    isEmpty() {
         return this.items.length == 0;
     }
-    clear = () => {
+    clear() {
         this.items = [];
     }
-    size = () => {
+    size() {
         return this.items.length;
     }
-    print = () => {
+    print() {
         console.log(this.items);
     }
 }

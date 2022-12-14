@@ -33,7 +33,7 @@ Output: [4, 1, 2, 3, 5]
 
 /* O(n) time since each element is only iterated once */
 const flatten = (array) => {
-    if (!array || array.length === 0) return [];
+    if (!array || array.length === 0) { return []; }
 
     let newArray = [];
     flattenArray(newArray, array);
@@ -54,7 +54,7 @@ const flattenArray = (newArray, array) => {
 
 
 console.log(flatten([]));
-console.log(flatten([1,[2,[3],4],[5]]));
+console.log(flatten([1, [2, [3], 4], [5]]));
 
 
 // Interesting Solution Different Approach
@@ -64,11 +64,11 @@ function _flattenArray(items) {
     // do not call the whole function recursively
     // ... that's this mule function's job
     function inner(input) {
-       if (Array.isArray(input)) {
-          input.forEach(inner);
-       } else {
-          flat.push(input);
-       }
+        if (Array.isArray(input)) {
+            input.forEach(inner);
+        } else {
+            flat.push(input);
+        }
     }
 
     // call on the "root" array
@@ -77,4 +77,4 @@ function _flattenArray(items) {
     return flat;
 }
 
-console.log(_flattenArray([1,[2,[3],4],[5]]));
+console.log(_flattenArray([1, [2, [3], 4], [5]]));
