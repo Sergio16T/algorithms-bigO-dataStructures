@@ -33,7 +33,7 @@ table.remove("Apple");
 
 
 var MyHashSet = function() {
-     this.set = [];
+    this.set = [];
 };
 
 MyHashSet.prototype.add = function(key) {

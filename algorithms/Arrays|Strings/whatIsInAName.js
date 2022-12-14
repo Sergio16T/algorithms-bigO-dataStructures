@@ -56,10 +56,10 @@ function whatIsInAName(collection, source) {
         let item = collection[i];
         let count = 0;
         for (let key in source) {
-            if (key in item && item[key] === source[key]) count++;
+            if (key in item && item[key] === source[key]) { count++; }
         }
-        if (count === keyCount) arr.push(item);
+        if (count === keyCount) { arr.push(item); }
     }
 
     return arr;
-  }
+}

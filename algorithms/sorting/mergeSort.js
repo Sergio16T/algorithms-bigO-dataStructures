@@ -1,7 +1,9 @@
 // Divide and conquer
 
 const recursiveMergeSort = (array) => {
-    if (array.length === 1) return array;
+    if (array.length === 1) {
+        return array;
+    }
 
     const mid = Math.floor(array.length / 2);
     let left = array.slice(0, mid);
@@ -24,12 +26,12 @@ const merge = (left, right) => {
             ir++;
         }
     }
-    while (il < left.length){
+    while (il < left.length) {
         result.push(left[il]);
         il++;
     }
 
-    while (ir < right.length){
+    while (ir < right.length) {
         result.push(right[ir]);
         ir++;
     }

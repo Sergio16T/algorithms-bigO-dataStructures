@@ -13,8 +13,11 @@ var firstUniqChar = function(s) {
     }
     for (let i = 0; i < s.length; i++) {
         let ch = s[i];
-        if (ch in map) map[ch] = -1;
-        else map[ch] = i;
+        if (ch in map) {
+            map[ch] = -1;
+        } else {
+            map[ch] = i;
+        }
     }
     let indices = Object.values(map);
     let result = indices.filter(index => index !== -1);

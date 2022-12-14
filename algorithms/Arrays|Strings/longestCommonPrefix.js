@@ -16,7 +16,8 @@
 // Quadratic  O(n^2)
 
 var longestCommonPrefix = function(strs) {
-    if (!strs.length) return "";
+    if (!strs.length) { return ""; }
+
     for (let i = 0; i <= strs[0].length - 1; i++) {
         for (let str of strs) {
             if (str[i] !== strs[0][i]) {
@@ -31,9 +32,9 @@ var longestCommonPrefix = function(strs) {
 var longestCommonPrefix2 = function(strs) {
     // Note: the longest common prefix will never be longer than the first string
     let strsToCheck = strs.slice(1); // Optimize RunTime by only checking strs beginning at index 1 against first string
-        // 1) Loop through strs[0].length
+    // 1) Loop through strs[0].length
     for (let i = 0; i < strs[0].length; i++) {
-         // 2) Nested loop to iterate through the strs
+        // 2) Nested loop to iterate through the strs
         for (let str of strsToCheck) {
         // 3) Check at each of index of str if every single str has the same character at same index as first string
             if (str[i] !== strs[0][i]) {

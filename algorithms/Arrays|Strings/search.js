@@ -7,7 +7,9 @@
 var search = function(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         let element = nums[i];
-        if (element === target) return i;
+        if (element === target) {
+            return i;
+        }
     }
     return -1;
 };

@@ -72,7 +72,7 @@ class ListNode {
         this.next = next;
     }
 
-    toString = () => {
+    toString() {
         return `ListNode { val: ${this.val}, next: ${this.next} }`;
     }
 }

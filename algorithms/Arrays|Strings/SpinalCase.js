@@ -16,22 +16,22 @@ function spinalCase(str) {
         let lastChar = spinalCase[spinalCase.length - 1];
 
         if (upperCase.test(char)) {
-          addDash(lastChar);
-          spinalCase += char.toLowerCase();
+            addDash(lastChar);
+            spinalCase += char.toLowerCase();
         } else if (replaceChar.test(char)) {
             addDash(lastChar);
         } else {
-          spinalCase += char.toLowerCase();
+            spinalCase += char.toLowerCase();
         }
     }
 
     function addDash (char) {
         if (char !== "-") {
             spinalCase += "-";
-          }
+        }
     }
 
     return spinalCase;
-  }
+}
 
 module.exports = spinalCase;

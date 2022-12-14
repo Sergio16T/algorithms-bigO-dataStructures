@@ -29,12 +29,12 @@ var mergeTwoLists = function(l1, l2) {
 
     listToArray(l1);
     listToArray(l2);
-    list.sort(function(a,b) {
+    list.sort(function(a, b) {
         return a - b;
     });
 
     function arrayToList(array) {
-       let list = null;
+        let list = null;
         for (let i = array.length - 1; i >= 0; i--) {
             list = new ListNode(array[i], list); // OR list = { val: array[i], next: list };
         }

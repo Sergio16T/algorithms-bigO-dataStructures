@@ -1,6 +1,6 @@
 // Find Minimum in Rotated Sorted Array
 
-const rotatedArray = [4, 5, 6, 7, 1, 2 ,3];
+const rotatedArray = [4, 5, 6, 7, 1, 2, 3];
 
 //binary search
 // Logarithmic O(log n) time complexity
@@ -11,8 +11,8 @@ function findMin(array) {
     let right = array.length - 1; // (1) in this example equals 6
 
     // cover edge cases
-    if (array.length === 1) return array[0];
-    if (array[left] < array[right]) return array[0];
+    if (array.length === 1) { return array[0]; }
+    if (array[left] < array[right]) { return array[0]; }
 
     while (left < right) { // continue while loop until both pointers are pointed at the min value
         // (1) 0 < 6 ? y

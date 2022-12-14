@@ -18,11 +18,11 @@
 // Linear O(n)
 
 function isValid(s) {
-    if (s === "") return true;
+    if (s === "") { return true; }
     const map = {
         "(" : ")",
         "{" : "}",
-        "[" : "]"
+        "[" : "]",
     };
     const stack = [];
     // with "{[]}" example stack would equal ["}", "]"];
