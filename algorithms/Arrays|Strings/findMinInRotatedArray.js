@@ -41,6 +41,8 @@ function findMin(array) {
 
 }
 
+findMin(rotatedArray) // 1
+
 exports.findMin = findMin;
 
 
