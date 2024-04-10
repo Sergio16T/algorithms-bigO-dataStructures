@@ -37,7 +37,9 @@ Approach B is fastest requires 1 iteration
 */
 
 /*
-Optimized Solution O(n)
+Optimized Solution
+Time complexity: O(n)
+Space complexity : O(1)
 Keep track of 3 nodes the head node, previous node, and the next node
 
 1) Create temp variable to store next node value
@@ -67,6 +69,25 @@ const reverseList = (head) => {
 let list2 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
 
 console.log("Approach B: ", reverseList(list2))
+
+
+
+
+function _reverseList(head) {
+    let prev = null,
+        curr = head;
+
+    while (curr != null) {
+        let nextTemp = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = nextTemp;
+    }
+    return prev;
+}
+
+
+
 
 
 // Brute Force Solution O(3n) --> O(n)

@@ -1,5 +1,7 @@
 // Divide and conquer
-
+/* TIME COMPLEXITY: O(N log N)
+SPACE COMPLEXITY: O(N)
+*/
 const recursiveMergeSort = (array) => {
     if (array.length === 1) {
         return array;
