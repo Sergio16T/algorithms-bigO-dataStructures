@@ -48,24 +48,24 @@ when the set does not contain character, we can proceed with adding to set calcu
  SPACE: O(n) where n is the number of elements stored in set which could be the length of s.
  */
 var lengthOfLongestSubstring = function(s) {
-    let set = new Set(),
-        left = 0,
-        right= 0,
-        maxWindow = 0;
+  const set = new Set();
+  let left = 0,
+    right= 0,
+    maxWindow = 0;
 
-    while (right < s.length) {
-        // "abcabcbb"
-        let char = s[right]; // right pointer iterates
-        if (set.has(char)) {
-            set.delete(s[left]);
-            left++;
-        } else {
-            set.add(char);
-            right++;
-            maxWindow = Math.max(set.size, maxWindow);
-        }
+  while (right < s.length) {
+    // "abcabcbb"
+    const char = s[right]; // right pointer iterates
+    if (set.has(char)) {
+      set.delete(s[left]);
+      left++;
+    } else {
+      set.add(char);
+      right++;
+      maxWindow = Math.max(set.size, maxWindow);
     }
-    return maxWindow;
+  }
+  return maxWindow;
 
 }
 
@@ -73,55 +73,55 @@ var lengthOfLongestSubstring = function(s) {
 // SPACE O(n) where n is the size of set containing at most s.length values.
 // Sliding Window Method
 var _lengthOfLongestSubstring = function(s) {
-    let set = new Set();
-    let left = 0;
-    let right = 0;
-    let max = 0;
-    while (right < s.length) {
-        let ch = s[right];
-        if (!set.has(ch)) {
-            set.add(ch);
-            max = Math.max(max, set.size);
-            right++;
-        } else {
-            set.delete(s[left]); // could also write set.delete(s.charAt(left));
-            left++;
-        }
+  const set = new Set();
+  let left = 0;
+  let right = 0;
+  let max = 0;
+  while (right < s.length) {
+    const ch = s[right];
+    if (!set.has(ch)) {
+      set.add(ch);
+      max = Math.max(max, set.size);
+      right++;
+    } else {
+      set.delete(s[left]); // could also write set.delete(s.charAt(left));
+      left++;
     }
-    // console.log(set)
-    return max;
+  }
+  // console.log(set)
+  return max;
 
 }
 
 
 
 var lengthOfLongestSubstring2 = function(s) {
-    // Sliding Window Problem??
-    // e.g. create a window beginning at first item and expand it's size
-    // until we reach a duplicate.
-    // as we increase the window we increment a counter for longest substring without repeat
-    // then we move the window over 1 character and see if it's a set. If it's not we
-    // contract the window 1 again until it's a unique set.
-    // always checking if window is larger than longest substring counter
-    let set = new Set(),
-        left = 0, // left keeps track of left side of window
-        right = 0, // right is the current number as we move window right
-        max = 0; // max keeps track of largest unique set.
-    while (right < s.length) {
-        let ch = s[right];
-        if (set.has(ch)) {
-            // we move left over 1
-            // delete the left most from set
-            set.delete(s[left])
-            left++;
-        } else {
-            set.add(ch);
-            max = Math.max(max, set.size)
-            right++;
-            // increment counter
-            // move right over
-        }
+  // Sliding Window Problem??
+  // e.g. create a window beginning at first item and expand it's size
+  // until we reach a duplicate.
+  // as we increase the window we increment a counter for longest substring without repeat
+  // then we move the window over 1 character and see if it's a set. If it's not we
+  // contract the window 1 again until it's a unique set.
+  // always checking if window is larger than longest substring counter
+  const set = new Set();
+  let left = 0, // left keeps track of left side of window
+    right = 0, // right is the current number as we move window right
+    max = 0; // max keeps track of largest unique set.
+  while (right < s.length) {
+    const ch = s[right];
+    if (set.has(ch)) {
+      // we move left over 1
+      // delete the left most from set
+      set.delete(s[left])
+      left++;
+    } else {
+      set.add(ch);
+      max = Math.max(max, set.size)
+      right++;
+      // increment counter
+      // move right over
     }
-    return max;
+  }
+  return max;
 
 };

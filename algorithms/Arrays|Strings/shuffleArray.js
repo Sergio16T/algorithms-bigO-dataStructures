@@ -2,7 +2,7 @@
 // use constructor to instantiate new object which can call methods to return original array and or shuffle array.
 // constructor pattern : capitalized function name where you can set several properties with this.
 var Solution = function(nums) {
-    this.numbers = [...nums];
+  this.numbers = [...nums];
 };
 
 /**
@@ -10,7 +10,7 @@ var Solution = function(nums) {
  *
  */
 Solution.prototype.reset = function() {
-    return this.numbers;
+  return this.numbers;
 };
 
 /**
@@ -18,9 +18,9 @@ Solution.prototype.reset = function() {
  *
  */
 Solution.prototype.shuffle = function() {
-    return this.numbers.map(x => ({ value: x, random: Math.random() }))
-        .sort((a, b) => a.random - b.random)
-        .map(x => x.value);
+  return this.numbers.map(x => ({ value: x, random: Math.random() }))
+    .sort((a, b) => a.random - b.random)
+    .map(x => x.value);
 };
 
 

@@ -10,15 +10,15 @@ For example, sumAll([4,1]) should return 10 because sum of all the numbers betwe
 // O(n) time complexity
 
 function sumAll(arr) {
-    let max = Math.max(...arr);
-    let min = Math.min(...arr);
-    let sum = max + min;
-    let n = max - 1;
-    while (n > min) {
-        sum += n;
-        n--;
-    }
-    return sum;
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  let sum = max + min;
+  let n = max - 1;
+  while (n > min) {
+    sum += n;
+    n--;
+  }
+  return sum;
 }
 
 const result = sumAll([1, 4]); // returns 10
@@ -26,12 +26,12 @@ console.log(result);
 
 
 function sumAll2(arr) {
-    let max = Math.max(...arr);
-    let min = Math.min(...arr);
-    let sum = max + min;
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  let sum = max + min;
 
-    for (let i = min + 1; i < max; i++) {
-        sum += i;
-    }
-    return sum;
+  for (let i = min + 1; i < max; i++) {
+    sum += i;
+  }
+  return sum;
 }

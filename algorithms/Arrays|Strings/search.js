@@ -5,11 +5,11 @@
 // 1) Solution 1 - Sequential Search
 // O(n)
 var search = function(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        let element = nums[i];
-        if (element === target) {
-            return i;
-        }
+  for (let i = 0; i < nums.length; i++) {
+    const element = nums[i];
+    if (element === target) {
+      return i;
     }
-    return -1;
+  }
+  return -1;
 };

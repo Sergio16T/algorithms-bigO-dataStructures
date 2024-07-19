@@ -11,25 +11,25 @@ TIME COMPLEXITY : O(N^2)
 SPACE COMPLEXITY: O(1)
 */
 var subarraySum = function(nums, k) {
-    /*
+  /*
     CONSTRAINTS:
         sub array can be 1:many length
         must be contiguious
     */
 
-    // [1,1,1]
+  // [1,1,1]
 
-    let count = 0;
-    for (let start = 0; start < nums.length; start++) {
-        let sum= 0;
-        for (let end = start; end < nums.length; end++) {
-            sum += nums[end];
-            if (sum == k) {
-                count++;
-            }
-        }
+  let count = 0;
+  for (let start = 0; start < nums.length; start++) {
+    let sum= 0;
+    for (let end = start; end < nums.length; end++) {
+      sum += nums[end];
+      if (sum == k) {
+        count++;
+      }
     }
-    return count;
+  }
+  return count;
 
 
 };
@@ -62,17 +62,17 @@ prefixSum[i - 1] = = prefixSum[j] - k
 */
 
 var _subarraySum = function(nums, k) {
-    const map = new Map();
-    map.set(0, 1);
-    let sum = 0;
-    let count = 0;
-    for (let num of nums) {
-        sum += num;
-        if (map.has(sum - k)) {
-            count += map.get(sum - k)
-        }
-        let v = map.has(sum) ? map.get(sum) : 0;
-        map.set(sum, v + 1);
+  const map = new Map();
+  map.set(0, 1);
+  let sum = 0;
+  let count = 0;
+  for (const num of nums) {
+    sum += num;
+    if (map.has(sum - k)) {
+      count += map.get(sum - k)
     }
-    return count;
+    const v = map.has(sum) ? map.get(sum) : 0;
+    map.set(sum, v + 1);
+  }
+  return count;
 };

@@ -6,12 +6,12 @@
 // "Hello World" returns 5
 
 var lengthOfLastWord = function(s) {
-    if (!s.length) { return 0; }
+  if (!s.length) { return 0; }
 
-    let str = s.split(" ");
-    str = str.filter(str => str !== "");
+  let str = s.split(" ");
+  str = str.filter(str => str !== "");
 
-    if (!str.length) { return 0; }
+  if (!str.length) { return 0; }
 
-    return str[str.length - 1].length;
+  return str[str.length - 1].length;
 };

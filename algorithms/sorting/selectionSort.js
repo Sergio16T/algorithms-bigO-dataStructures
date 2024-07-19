@@ -6,22 +6,22 @@
 //  This will lead to sorting the array by selecting the minvalue from a group and setting that minValue at front of that group
 
 const selectionSort = (array) => {
-    for (let i = 0; i < array.length; i++) {
-        let indexMin = i;
-        for (let j = i; j < array.length; j++) {
-            if (array[indexMin] > array[j]) {
-                indexMin = j;
-            }
-        }
-        if (i !== indexMin) {
-            let temp = array[i];
-            array[i] = array[indexMin];
-            array[indexMin] = temp;
-        }
+  for (let i = 0; i < array.length; i++) {
+    let indexMin = i;
+    for (let j = i; j < array.length; j++) {
+      if (array[indexMin] > array[j]) {
+        indexMin = j;
+      }
     }
-    return array;
+    if (i !== indexMin) {
+      const temp = array[i];
+      array[i] = array[indexMin];
+      array[indexMin] = temp;
+    }
+  }
+  return array;
 }
 
-let array = [0, 6, 5, 1, 3, 2];
+const array = [0, 6, 5, 1, 3, 2];
 
 console.log(selectionSort(array))

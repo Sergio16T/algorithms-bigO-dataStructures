@@ -38,28 +38,28 @@ Runtime is O(n)
 */
 
 const findPairsWithMap = (nums, diff) => {
-    let count = 0;
-    let map = initializeMap(nums);
+  let count = 0;
+  const map = initializeMap(nums);
 
-    let keySet = [...map.keys()]; // uniqueKeySet allows us to avoid checking for same x + k twice
+  const keySet = [...map.keys()]; // uniqueKeySet allows us to avoid checking for same x + k twice
 
-    for (let i = 0; i < keySet.length ; i++) {
-        let number = keySet[i];
-        let lookUpNum = number + diff;
+  for (let i = 0; i < keySet.length ; i++) {
+    const number = keySet[i];
+    const lookUpNum = number + diff;
 
-        // cover edge case of diff being 0
-        if (diff !== 0 ) {
-            if (map.get(lookUpNum)) {
-                count+=1;
-            }
-        } else {
-            if (map.get(number) > 1) { count +=1; }
-        }
-
-
+    // cover edge case of diff being 0
+    if (diff !== 0 ) {
+      if (map.get(lookUpNum)) {
+        count+=1;
+      }
+    } else {
+      if (map.get(number) > 1) { count +=1; }
     }
 
-    return count;
+
+  }
+
+  return count;
 }
 
 findPairsWithMap([1, 3, 5, 9, 4, 2], 2);
@@ -69,55 +69,55 @@ findPairsWithMap([1, 3, 5, 9, 4, 2], 2);
  * @returns {Map} Map Object Containing Key|Value Pairs. Value equal to number of times key appears in nums
  */
 function initializeMap(nums) {
-    let map = new Map();
+  const map = new Map();
 
-    nums.forEach(number => {
-        if (map.get(number)) {
-            map.set(number, map.get(number) + 1);
-        } else {
-            map.set(number, 1);
-        }
-    });
+  nums.forEach(number => {
+    if (map.get(number)) {
+      map.set(number, map.get(number) + 1);
+    } else {
+      map.set(number, 1);
+    }
+  });
 
-    return map;
+  return map;
 }
 
 
 const findPairs = (nums, diff) => {
-    let count = 0;
-    let dictionary = initializeDict(nums);
-    let keySet = Object.keys(dictionary);
+  let count = 0;
+  const dictionary = initializeDict(nums);
+  const keySet = Object.keys(dictionary);
 
-    // Simplify iteration by using dictionary keys
-    for (let i = 0; i < keySet.length ; i++) {
-        let number = Number(keySet[i]);
-        let lookUpNum = number + diff;
+  // Simplify iteration by using dictionary keys
+  for (let i = 0; i < keySet.length ; i++) {
+    const number = Number(keySet[i]);
+    const lookUpNum = number + diff;
 
-        if (diff !== 0 ) {
-            if (lookUpNum in dictionary) {
-                count+=1;
-            }
-        } else {
-            if (dictionary[number] > 1) {count +=1;}
-        }
+    if (diff !== 0 ) {
+      if (lookUpNum in dictionary) {
+        count+=1;
+      }
+    } else {
+      if (dictionary[number] > 1) {count +=1;}
     }
+  }
 
-    return count;
+  return count;
 }
 
 
 function initializeDict(nums) {
-    let dictionary = {};
-    nums.forEach(number => {
-        if (number in dictionary) {
-            dictionary[number] += 1
-        } else {
-            dictionary[number] = 1
-        }
-    });
-    return dictionary;
+  const dictionary = {};
+  nums.forEach(number => {
+    if (number in dictionary) {
+      dictionary[number] += 1
+    } else {
+      dictionary[number] = 1
+    }
+  });
+  return dictionary;
 }
 
 
-let answer = findPairs([1, 2, 4, 4, 3, 3, 0, 9, 2, 3], 3);
+const answer = findPairs([1, 2, 4, 4, 3, 3, 0, 9, 2, 3], 3);
 console.log("answer: ", answer);

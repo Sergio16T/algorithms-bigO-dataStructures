@@ -5,43 +5,43 @@
 // O(n)
 
 const reverseVowels = function(s) {
-    s = s.split("");
-    let map = {
-        'a': 'a',
-        'A' : 'A',
-        'e': 'e',
-        "E" : "E",
-        "i": "i",
-        "I" : "I",
-        "o":"o",
-        "O": "O",
-        "u":"u",
-        "U": "U",
-    };
-    let indices = [];
-    let vowels = [];
-    for (let i = 0; i < s.length; i++) {
-        let ch = s[i];
-        if (map[ch]) {
-            indices.push(i);
-            vowels.push(ch);
-        }
+  s = s.split("");
+  const map = {
+    'a': 'a',
+    'A' : 'A',
+    'e': 'e',
+    "E" : "E",
+    "i": "i",
+    "I" : "I",
+    "o":"o",
+    "O": "O",
+    "u":"u",
+    "U": "U",
+  };
+  const indices = [];
+  let vowels = [];
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i];
+    if (map[ch]) {
+      indices.push(i);
+      vowels.push(ch);
     }
-    vowels = reverseArray(vowels);
-    for (let j = 0; j < vowels.length; j++) {
-        let index = indices[j];
-        s[index] = vowels[j];
-    }
-    return s.join("");
+  }
+  vowels = reverseArray(vowels);
+  for (let j = 0; j < vowels.length; j++) {
+    const index = indices[j];
+    s[index] = vowels[j];
+  }
+  return s.join("");
 };
 
 function reverseArray(array) {
-    for (let i = 0; i < Math.floor(array.length/2); i++) {
-        let temp= array[i];
-        array[i] = array[array.length - 1 - i];
-        array[array.length - 1 - i] = temp;
-    }
-    return array;
+  for (let i = 0; i < Math.floor(array.length/2); i++) {
+    const temp= array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = temp;
+  }
+  return array;
 }
 
 module.exports = reverseVowels;

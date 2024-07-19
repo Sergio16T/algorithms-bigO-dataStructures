@@ -1,5 +1,7 @@
 ## Sliding Window
-
+Two types of subproblems
+1. fixed size sliding window
+2. variable size sliding window
 
 ```JavaScript
 
@@ -38,13 +40,15 @@ var lengthOfLIS = function(nums) {
 
 backtracking is a general algorithm for finding all (or some) solutions to some computational problems. The idea is that it incrementally builds candidates to the solutions, and abandons a candidate ("backtrack") as soon as it determines that this candidate cannot lead to a final solution.
 
+DFS Algorithm's are a great example for solutions that use Backtracking
 
 ## Dynamic Programing
 
 
 ## Tabulaton
 
-Tabulation is a bottom-up approach where we store the results of the subproblems in a table and use these results to solve larger subproblems until we solve the entire problem. It is used when we can define the problem as a sequence of subproblems and the subproblems do not overlap. Tabulation is typically implemented using iteration and is well-suited for problems that have a large set of inputs.
+Tabulation is a bottom-up approach where we store the results of the subproblems in a table and use these results to solve larger subproblems until we solve the entire problem.
+It is used when we can define the problem as a sequence of subproblems and the subproblems do not overlap. Tabulation is typically implemented using iteration and is well-suited for problems that have a large set of inputs.
 
 ## Memoization
 Memoization is a top-down approach where we cache the results of function calls and return the cached result if the function is called again with the same inputs. It is used when we can divide the problem into subproblems and the subproblems have overlapping subproblems. Memoization is typically implemented using recursion and is well-suited for problems that have a relatively small set of inputs.
@@ -74,6 +78,11 @@ Use 2 pointers to iterate through input data. Storing values as needed
 Two pointer approach is an essential part of a programmer’s toolkit, especially in technical interviews. The name does justice in this case, it involves using two pointers to save time and space. (Here, pointers are basically array indexes).
 
 The idea here is to iterate two different parts of the array simultaneously to get the answer faster.
+
+## Two Pointer Sub patterns
+
+### Approaching Pointers
+Two Pointers Moving Toward Each Other
 
 
 ## Fast & Slow Pointers

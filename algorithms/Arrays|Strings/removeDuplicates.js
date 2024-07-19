@@ -1,11 +1,11 @@
 // Remove duplicates from an array
 
 const removeDuplicates = (array) => {
-    return array.reduce((previousValue, element) => previousValue.includes(element) ? previousValue : [...previousValue, element], []);
+  return array.reduce((previousValue, element) => previousValue.includes(element) ? previousValue : [...previousValue, element], []);
 }
 
 const removeDuplicatesWithSet = (array) => {
-    return [...new Set(array)];
+  return [...new Set(array)];
 }
 
 console.log(removeDuplicates([1, 2, 1, 1, 2, 3]));
@@ -30,17 +30,17 @@ Time Complexity: O(N), since we only have 2 pointers, and both the pointers will
 Space Complexity: O(1, since we are not using any extra space.
 */
 var _removeDuplicates = function(nums) {
-    let insertIndex = 1;
-    for(let i = 1; i < nums.length; i++) {
-        // We skip to next index if we see a duplicate element
-        if(nums[i - 1] != nums[i]) {
-            /* comparing against previous value */
+  let insertIndex = 1;
+  for(let i = 1; i < nums.length; i++) {
+    // We skip to next index if we see a duplicate element
+    if(nums[i - 1] != nums[i]) {
+      /* comparing against previous value */
 
-            nums[insertIndex] = nums[i];
-            insertIndex++;
-        }
+      nums[insertIndex] = nums[i];
+      insertIndex++;
     }
-    return insertIndex;
+  }
+  return insertIndex;
 };
 
 removeDuplicates([4, 4, 4, 6]); // [4, 6, 4, 6] return insertIndex 2 which is the length of sub-array containing unique items.

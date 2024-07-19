@@ -18,32 +18,32 @@ We also store the frequency count in the hash set. Therefore, the total space co
 */
 
 var _uniqueOccurrences = function(arr) {
-    const map = new Map();
+  const map = new Map();
 
-    for (let i = 0; i < arr.length; i++) {
-        let int = arr[i];
-        if (map.has(int)) {
-            map.set(int, map.get(int) + 1);
-        } else {
-            map.set(int, 1);
-        }
+  for (let i = 0; i < arr.length; i++) {
+    const int = arr[i];
+    if (map.has(int)) {
+      map.set(int, map.get(int) + 1);
+    } else {
+      map.set(int, 1);
     }
-    return new Set(map.values()).size === map.size;
+  }
+  return new Set(map.values()).size === map.size;
 
 };
 
 var uniqueOccurrences = function(arr) {
-    const map = {};
+  const map = {};
 
-    for (let i = 0; i < arr.length; i++) {
-        let int = arr[i];
-        if (int in map) {
-            map[int] += 1;
-        } else {
-            map[int] = 1;
-        }
+  for (let i = 0; i < arr.length; i++) {
+    const int = arr[i];
+    if (int in map) {
+      map[int] += 1;
+    } else {
+      map[int] = 1;
     }
-    const occurences = Object.values(map);
-    return new Set(occurences).size === occurences.length;
+  }
+  const occurences = Object.values(map);
+  return new Set(occurences).size === occurences.length;
 
 };

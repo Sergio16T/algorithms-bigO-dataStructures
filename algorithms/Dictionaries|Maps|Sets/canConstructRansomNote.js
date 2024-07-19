@@ -23,25 +23,25 @@
     SPACE: O(m) where m is the number of characters in magazine if we can be sure that we are limited to 26 characters than this will be max 0(1) constant
  */
 var canConstruct = function(ransomNote, magazine) {
-    let magazineCharCount = new Map();
+  const magazineCharCount = new Map();
 
-    for (let char of magazine) {
-        if (magazineCharCount.has(char)) {
-            magazineCharCount.set(char, magazineCharCount.get(char) + 1);
-        } else {
-            magazineCharCount.set(char, 1);
-        }
+  for (const char of magazine) {
+    if (magazineCharCount.has(char)) {
+      magazineCharCount.set(char, magazineCharCount.get(char) + 1);
+    } else {
+      magazineCharCount.set(char, 1);
     }
+  }
 
-    for (let char of ransomNote) {
-        if (magazineCharCount.get(char) > 0) {
-            magazineCharCount.set(char, magazineCharCount.get(char) - 1);
-        } else {
-            return false;
-        }
+  for (const char of ransomNote) {
+    if (magazineCharCount.get(char) > 0) {
+      magazineCharCount.set(char, magazineCharCount.get(char) - 1);
+    } else {
+      return false;
     }
+  }
 
-    return true;
+  return true;
 
 
 };
@@ -49,16 +49,16 @@ var canConstruct = function(ransomNote, magazine) {
 
 // BRUTE FORCE INITIAL SOLUTION
 var _canConstruct = function(ransomNote, magazine) {
-    let copy = magazine.slice(0);
-    for (let char of ransomNote) {
-        if (copy.includes(char)) {
-            copy = copy.replace(char, "");
-        } else {
-            return false;
-        }
+  let copy = magazine.slice(0);
+  for (const char of ransomNote) {
+    if (copy.includes(char)) {
+      copy = copy.replace(char, "");
+    } else {
+      return false;
     }
+  }
 
-    return true;
+  return true;
 
 
 };
@@ -71,16 +71,16 @@ var _canConstruct = function(ransomNote, magazine) {
 // This is a total of n times, and so we get n * O(m) = O(m⋅n)
 // SPACE is O(m): Creating a new magazine with one letter less requires auxillary space the length of the magazine; O(m)
 var _canConstruct2 = function(ransomNote, magazine) {
-    for (let char of ransomNote) {
-        let index = magazine.indexOf(char)
-        if (index >= 0) { // linear search
-            magazine = magazine.substring(0, index) + magazine.substring(index + 1); // linear search and replace
-        } else {
-            return false;
-        }
+  for (const char of ransomNote) {
+    const index = magazine.indexOf(char)
+    if (index >= 0) { // linear search
+      magazine = magazine.substring(0, index) + magazine.substring(index + 1); // linear search and replace
+    } else {
+      return false;
     }
+  }
 
-    return true;
+  return true;
 
 
 };

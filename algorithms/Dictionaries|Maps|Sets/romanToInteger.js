@@ -21,26 +21,26 @@ var romanToInt = function(s) {
     WHEN A SMALLER NUMBER IS BEFORE A LARGER NUMBER THEN WE SUBTRACT OTHERWISE WE ADD
 
     */
-    const dict = {
-        "I": 1,
-        "V": 5,
-        "X": 10,
-        "L": 50,
-        "C": 100,
-        "D": 500,
-        "M": 1000,
-    }
+  const dict = {
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M": 1000,
+  }
 
-    let number = 0;
-    // Iterate through string checking
-    for (let i = 0 ; i < s.length; i++) {
-        let char = s[i];
-        let nextChar = s[i + 1]; // check if next variable is larger if so then number is negative.
-        if (dict[char] < dict[nextChar]) {
-            number += -dict[char]
-        } else {
-            number += dict[char];
-        }
+  let number = 0;
+  // Iterate through string checking
+  for (let i = 0 ; i < s.length; i++) {
+    const char = s[i];
+    const nextChar = s[i + 1]; // check if next variable is larger if so then number is negative.
+    if (dict[char] < dict[nextChar]) {
+      number += -dict[char]
+    } else {
+      number += dict[char];
     }
-    return number;
+  }
+  return number;
 };

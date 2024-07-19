@@ -8,21 +8,21 @@
 
 
 function _whatIsInAName(collection, source) {
-    let arr = [],
-        keysToCheck = Object.keys(source);
+  const arr = [],
+    keysToCheck = Object.keys(source);
 
-    // 1) iterate through the collection
-    // 2) Check at each index if the object contains the key & value pair
-    collection.forEach(item => {
-        let addItem = keysToCheck.every(key => {
-            return item[key] === source[key];
-        });
-        if (addItem) {
-            arr.push(item);
-        }
+  // 1) iterate through the collection
+  // 2) Check at each index if the object contains the key & value pair
+  collection.forEach(item => {
+    const addItem = keysToCheck.every(key => {
+      return item[key] === source[key];
     });
+    if (addItem) {
+      arr.push(item);
+    }
+  });
 
-    return arr;
+  return arr;
 }
 
 _whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
@@ -30,14 +30,14 @@ _whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last:
 
 // O(n^2)
 const whatIsInANameSolution2 = (collection, source) => {
-    var srcKeys = Object.keys(source);
+  var srcKeys = Object.keys(source);
 
-    return collection.filter((obj) => {
-        return srcKeys.every((key) => {
-            // return obj.hasOwnProperty(key) && obj[key] === source[key];
-            return key in obj && obj[key] === source[key];
-        });
+  return collection.filter((obj) => {
+    return srcKeys.every((key) => {
+      // return obj.hasOwnProperty(key) && obj[key] === source[key];
+      return key in obj && obj[key] === source[key];
     });
+  });
 }
 
 // cases
@@ -47,19 +47,19 @@ whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "
 
 // O(n^2)
 function whatIsInAName(collection, source) {
-    // 1) loop through each the keys in the source object because both of those key value pairs need to be in each
-    // object for us to add this to our return value
-    let arr = [];
-    let keyCount = Object.keys(source).length;
+  // 1) loop through each the keys in the source object because both of those key value pairs need to be in each
+  // object for us to add this to our return value
+  const arr = [];
+  const keyCount = Object.keys(source).length;
 
-    for (let i = 0; i < collection.length; i++) {
-        let item = collection[i];
-        let count = 0;
-        for (let key in source) {
-            if (key in item && item[key] === source[key]) { count++; }
-        }
-        if (count === keyCount) { arr.push(item); }
+  for (let i = 0; i < collection.length; i++) {
+    const item = collection[i];
+    let count = 0;
+    for (const key in source) {
+      if (key in item && item[key] === source[key]) { count++; }
     }
+    if (count === keyCount) { arr.push(item); }
+  }
 
-    return arr;
+  return arr;
 }
