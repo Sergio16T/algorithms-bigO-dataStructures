@@ -33,23 +33,23 @@ Output: [4, 1, 2, 3, 5]
 
 /* O(n) time since each element is only iterated once */
 const flatten = (array) => {
-    if (!array || array.length === 0) { return []; }
+  if (!array || array.length === 0) { return []; }
 
-    let newArray = [];
-    flattenArray(newArray, array);
+  const newArray = [];
+  flattenArray(newArray, array);
 
-    return newArray;
+  return newArray;
 }
 
 const flattenArray = (newArray, array) => {
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        if (Array.isArray(element)) {
-            flattenArray(newArray, element);
-        } else {
-            newArray.push(element);
-        }
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    if (Array.isArray(element)) {
+      flattenArray(newArray, element);
+    } else {
+      newArray.push(element);
     }
+  }
 }
 
 
@@ -59,22 +59,22 @@ console.log(flatten([1, [2, [3], 4], [5]]));
 
 // Interesting Solution Different Approach
 function _flattenArray(items) {
-    const flat = [];
+  const flat = [];
 
-    // do not call the whole function recursively
-    // ... that's this mule function's job
-    function inner(input) {
-        if (Array.isArray(input)) {
-            input.forEach(inner);
-        } else {
-            flat.push(input);
-        }
+  // do not call the whole function recursively
+  // ... that's this mule function's job
+  function inner(input) {
+    if (Array.isArray(input)) {
+      input.forEach(inner);
+    } else {
+      flat.push(input);
     }
+  }
 
-    // call on the "root" array
-    inner(items);
+  // call on the "root" array
+  inner(items);
 
-    return flat;
+  return flat;
 }
 
 console.log(_flattenArray([1, [2, [3], 4], [5]]));

@@ -12,13 +12,13 @@
 
 // O(n) time
 var deleteDuplicates = function(head) {
-    let currentNode = head;
-    while (currentNode) {
-        if (currentNode.next && currentNode.val === currentNode.next.val) {
-            currentNode.next = currentNode.next.next;
-        } else {
-            currentNode = currentNode.next;
-        }
+  let currentNode = head;
+  while (currentNode) {
+    if (currentNode.next && currentNode.val === currentNode.next.val) {
+      currentNode.next = currentNode.next.next;
+    } else {
+      currentNode = currentNode.next;
     }
-    return head;
+  }
+  return head;
 };

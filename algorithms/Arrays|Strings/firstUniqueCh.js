@@ -8,19 +8,19 @@ return 2.
 */
 
 var firstUniqChar = function(s) {
-    const map = {
-        // ch: index
+  const map = {
+    // ch: index
+  }
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i];
+    if (ch in map) {
+      map[ch] = -1;
+    } else {
+      map[ch] = i;
     }
-    for (let i = 0; i < s.length; i++) {
-        let ch = s[i];
-        if (ch in map) {
-            map[ch] = -1;
-        } else {
-            map[ch] = i;
-        }
-    }
-    let indices = Object.values(map);
-    let result = indices.filter(index => index !== -1);
-    return result.length ? result[0] : -1;
+  }
+  const indices = Object.values(map);
+  const result = indices.filter(index => index !== -1);
+  return result.length ? result[0] : -1;
 
 }

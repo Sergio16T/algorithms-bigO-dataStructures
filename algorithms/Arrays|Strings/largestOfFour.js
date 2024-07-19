@@ -1,7 +1,7 @@
 function largestOfFour(arr) {
-    return arr.map(subArray => {
-        return subArray.reduce((startValue, element) => startValue > element ? startValue : element);
-    });
+  return arr.map(subArray => {
+    return subArray.reduce((startValue, element) => startValue > element ? startValue : element);
+  });
 }
 // map over the values in the array
 // within each iteration of the map function I can reduce the array to the largestNumber

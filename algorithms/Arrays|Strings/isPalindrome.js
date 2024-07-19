@@ -15,36 +15,36 @@ ONE PASS: Use two pointers to compare strings from left to right until left is e
 */
 // TIME:  O(n) Space: O(1)
 var isPalindrome = function(s) {
-    let left = 0;
-    let right = s.length - 1;
+  let left = 0;
+  let right = s.length - 1;
 
 
-    // move pointers from left to right ignoring invalid characters
-    while (left < right) {
-        if (!isValidChar(s[left])) {
-            left++;
-            continue;
-        }
-        if (!isValidChar(s[right])) {
-            right--;
-            continue;
-        }
-
-        if (s[left].toLowerCase() !== s[right].toLowerCase()) {
-            return false;
-        }
-        left++;
-        right--;
+  // move pointers from left to right ignoring invalid characters
+  while (left < right) {
+    if (!isValidChar(s[left])) {
+      left++;
+      continue;
     }
-    return true;
+    if (!isValidChar(s[right])) {
+      right--;
+      continue;
+    }
+
+    if (s[left].toLowerCase() !== s[right].toLowerCase()) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
 
 };
 
 function isValidChar(char) {
-    let regex = /[a-z0-9]/gi,
-        isValidChar = regex.test(char);
+  const regex = /[a-z0-9]/gi,
+    isValidChar = regex.test(char);
 
-    return isValidChar;
+  return isValidChar;
 }
 
 
@@ -69,22 +69,22 @@ SPACE: O(n) to store the str copy of n valid characters. we also need O(n) space
 */
 
 var _isPalindrome = function(s) {
-    let str = "";
+  let str = "";
 
-    for (let i = 0; i < s.length; i++) {
-        let regex = /[a-z0-9]/gi,
-            char = s[i],
-            isValidChar = regex.test(char);
+  for (let i = 0; i < s.length; i++) {
+    const regex = /[a-z0-9]/gi,
+      char = s[i],
+      isValidChar = regex.test(char);
 
-        if (isValidChar) {
-            str += char.toLowerCase();
-        }
+    if (isValidChar) {
+      str += char.toLowerCase();
     }
+  }
 
-    if (!str.length) {
-        return true;
-    }
-    return str.split("").reverse().join("") === str;
+  if (!str.length) {
+    return true;
+  }
+  return str.split("").reverse().join("") === str;
 };
 
 

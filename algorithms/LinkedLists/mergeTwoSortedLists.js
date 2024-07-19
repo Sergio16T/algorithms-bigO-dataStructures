@@ -18,35 +18,35 @@
  * @return {ListNode}
 */
 var mergeTwoLists = function(l1, l2) {
-    let list = [];
+  const list = [];
 
-    function listToArray(linkedList) {
-        while (linkedList !== null) {
-            list.push(linkedList.val);
-            linkedList = linkedList.next;
-        }
+  function listToArray(linkedList) {
+    while (linkedList !== null) {
+      list.push(linkedList.val);
+      linkedList = linkedList.next;
     }
+  }
 
-    listToArray(l1);
-    listToArray(l2);
-    list.sort(function(a, b) {
-        return a - b;
-    });
+  listToArray(l1);
+  listToArray(l2);
+  list.sort(function(a, b) {
+    return a - b;
+  });
 
-    function arrayToList(array) {
-        let list = null;
-        for (let i = array.length - 1; i >= 0; i--) {
-            list = new ListNode(array[i], list); // OR list = { val: array[i], next: list };
-        }
-        return list;
+  function arrayToList(array) {
+    let list = null;
+    for (let i = array.length - 1; i >= 0; i--) {
+      list = new ListNode(array[i], list); // OR list = { val: array[i], next: list };
     }
-    return arrayToList(list);
+    return list;
+  }
+  return arrayToList(list);
 
 };
 
 function ListNode(val, next) {
-    this.val = val;
-    this.next = next;
+  this.val = val;
+  this.next = next;
 }
 
 /*

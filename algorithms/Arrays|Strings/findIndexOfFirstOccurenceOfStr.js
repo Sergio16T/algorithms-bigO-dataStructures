@@ -21,21 +21,21 @@ space complexity: O(1)
 There are a handful of variables in the code (m, n, i, window_start), and all of them use constant space, hence, the space complexity is constant.
 */
 var strStr = function(haystack, needle) {
-    let lengthOfWindow = needle.length; // n
-    let h = haystack.length;
+  const lengthOfWindow = needle.length; // n
+  const h = haystack.length;
 
-    for (let windowStart = 0; windowStart <= h - lengthOfWindow; windowStart++) {
-        // at each window iterate through the length of needle to see if there is a match;
-        for (let i = 0; i < lengthOfWindow; i++) {
-            // compare each char in the window of haystack against the needle
-            if (haystack[windowStart + i] != needle[i]) {
-                // break the loop if not equal and window will move
-                break;
-            }
-            if (i === lengthOfWindow - 1) {
-                return windowStart;
-            }
-        }
+  for (let windowStart = 0; windowStart <= h - lengthOfWindow; windowStart++) {
+    // at each window iterate through the length of needle to see if there is a match;
+    for (let i = 0; i < lengthOfWindow; i++) {
+      // compare each char in the window of haystack against the needle
+      if (haystack[windowStart + i] != needle[i]) {
+        // break the loop if not equal and window will move
+        break;
+      }
+      if (i === lengthOfWindow - 1) {
+        return windowStart;
+      }
     }
-    return -1;
+  }
+  return -1;
 };

@@ -1,13 +1,3 @@
-// @TODO
-
-/*
-A Binary search tree is a tree that follows some order to arrange the elements, whereas the binary tree does not follow any order.
-
-In a Binary search tree, the value of the left node must be smaller than the parent node, and the value of the right node must be greater than the parent node.
-This property makes it efficient for searching, insertion, and deletion operations
-
-*/
-
 
 class TreeNode {
   constructor(value) {
@@ -17,7 +7,7 @@ class TreeNode {
   }
 }
 
-class BinarySearchTree {
+class BinaryTree {
   constructor() {
     this.root = null;
   }
@@ -62,43 +52,6 @@ class BinarySearchTree {
     } else {
       return true;
     }
-  }
-
-  remove(value) {
-    this.root = this._removeNode(this.root, value);
-  }
-
-  _removeNode(node, value) {
-    if (node === null) {
-      return null;
-    }
-    if (value < node.value) {
-      node.left = this._removeNode(node.left, value);
-      return node;
-    } else if (value > node.value) {
-      node.right = this._removeNode(node.right, value);
-      return node;
-    } else {
-      // Node with only one child or no child
-      if (node.left === null) {
-        return node.right;
-      } else if (node.right === null) {
-        return node.left;
-      }
-
-      // Node with two children
-      // Get the inorder successor (smallest in the right subtree)
-      node.value = this._findMinNode(node.right).value;
-      node.right = this._removeNode(node.right, node.value);
-      return node;
-    }
-  }
-
-  _findMinNode(node) {
-    while (node.left !== null) {
-      node = node.left;
-    }
-    return node;
   }
 
   preOrderTraversal() {
@@ -150,22 +103,18 @@ class BinarySearchTree {
 //     5    15
 //    / \   / \
 //   3   7 13  17
-const bst = new BinarySearchTree();
-bst.insert(10);
-bst.insert(5);
-bst.insert(15);
-bst.insert(3);
-bst.insert(7);
-bst.insert(13);
-bst.insert(17);
+const tree = new BinaryTree();
+tree.insert(10);
+tree.insert(5);
+tree.insert(15);
+tree.insert(3);
+tree.insert(7);
+tree.insert(13);
+tree.insert(17);
 
-console.log("Pre-order Traversal:", bst.preOrderTraversal()); // Output: [10, 5, 3, 7, 15, 13, 17]
-console.log("In-order Traversal:", bst.inOrderTraversal());   // Output: [3, 5, 7, 10, 13, 15, 17]
-console.log("Post-order Traversal:", bst.postOrderTraversal()); // Output: [3, 7, 5, 13, 17, 15, 10]
+console.log("Pre-order Traversal:", tree.preOrderTraversal()); // Output: [10, 5, 3, 7, 15, 13, 17]
+console.log("In-order Traversal:", tree.inOrderTraversal());   // Output: [3, 5, 7, 10, 13, 15, 17]
+console.log("Post-order Traversal:", tree.postOrderTraversal()); // Output: [3, 7, 5, 13, 17, 15, 10]
 
-console.log("Search 7:", bst.search(7)); // Output: true
-console.log("Search 20:", bst.search(20)); // Output: false
-
-bst.remove(15);
-console.log("In-order Traversal after removing 15:", bst.inOrderTraversal()); // Output: [3, 5, 7, 10, 13, 17]
-
+console.log("Search 7:", tree.search(7)); // Output: true
+console.log("Search 20:", tree.search(20)); // Output: false

@@ -10,15 +10,15 @@ return the number of times the substring repeats within the string */
 // the end index being i + substring.length
 
 const countSubstring = (substring, s) => {
-    let count = 0;
-    let length = s.length - substring.length;
-    for (let i = 0; i <= length; i++) {
-        let subS = s.substring(i, i + substring.length);
-        if (subS === substring) {
-            count++;
-        }
+  let count = 0;
+  const length = s.length - substring.length;
+  for (let i = 0; i <= length; i++) {
+    const subS = s.substring(i, i + substring.length);
+    if (subS === substring) {
+      count++;
     }
-    return count;
+  }
+  return count;
 }
 
 console.log(countSubstring("tap", "tapwatertap"));

@@ -20,23 +20,23 @@ we have N number of strings with K Number of Chars
 */
 
 var groupAnagrams = function(strs) {
-    // maintain a Map and store the strs as keys.
-    // sort the characters in strs and check if in dictionary.
-    // if so push unsorted str to the map that corresponds with sorted key
-    // if not add the key and add the str unsorted with corresponding key.
-    const map = {};
+  // maintain a Map and store the strs as keys.
+  // sort the characters in strs and check if in dictionary.
+  // if so push unsorted str to the map that corresponds with sorted key
+  // if not add the key and add the str unsorted with corresponding key.
+  const map = {};
 
-    // One pass
-    for (let str of strs) {
-        let key = str.split('').sort().join('');
-        if (key in map) {
-            map[key].push(str);
-        } else {
-            map[key] = new Array(str);
-        }
+  // One pass
+  for (const str of strs) {
+    const key = str.split('').sort().join('');
+    if (key in map) {
+      map[key].push(str);
+    } else {
+      map[key] = new Array(str);
     }
+  }
 
-    return Object.values(map);
+  return Object.values(map);
 
 };
 

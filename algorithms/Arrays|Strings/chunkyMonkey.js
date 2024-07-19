@@ -3,11 +3,11 @@ the length of size (second argument) and returns them as a two-dimensional array
 */
 
 function chunkArrayInGroups(arr, size) {
-    let newArr = [];
+  const newArr = [];
 
-    while (arr.length) {
-        newArr.push(arr.splice(0, size));
-    }
+  while (arr.length) {
+    newArr.push(arr.splice(0, size));
+  }
 
-    return newArr;
+  return newArr;
 }

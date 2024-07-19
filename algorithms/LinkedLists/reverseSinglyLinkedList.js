@@ -50,23 +50,23 @@ Keep track of 3 nodes the head node, previous node, and the next node
 */
 
 const reverseList = (head) => {
-    let reversed = null;
+  let reversed = null;
 
-    while (head) {
-        let next = head.next; // 1) temp variable to store next value
-        // 2) head's next node is assigned value of current reversed linked list
-        head.next = reversed; // with first iteration previous node doesn't exist so we assign it to value of null
+  while (head) {
+    const next = head.next; // 1) temp variable to store next value
+    // 2) head's next node is assigned value of current reversed linked list
+    head.next = reversed; // with first iteration previous node doesn't exist so we assign it to value of null
 
-        // 3) assign reversed to the value of head node/current node of linked list
-        reversed = head;
-        // 4) assign the head to the next node in list
-        head = next;
-    }
+    // 3) assign reversed to the value of head node/current node of linked list
+    reversed = head;
+    // 4) assign the head to the next node in list
+    head = next;
+  }
 
-    return reversed;
+  return reversed;
 }
 // [1 2 3] --> [2 3 null] -->
-let list2 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
+const list2 = new ListNode(1, new ListNode(2, new ListNode(3, null)));
 
 console.log("Approach B: ", reverseList(list2))
 
@@ -74,16 +74,16 @@ console.log("Approach B: ", reverseList(list2))
 
 
 function _reverseList(head) {
-    let prev = null,
-        curr = head;
+  let prev = null,
+    curr = head;
 
-    while (curr != null) {
-        let nextTemp = curr.next;
-        curr.next = prev;
-        prev = curr;
-        curr = nextTemp;
-    }
-    return prev;
+  while (curr != null) {
+    const nextTemp = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = nextTemp;
+  }
+  return prev;
 }
 
 
@@ -92,55 +92,55 @@ function _reverseList(head) {
 
 // Brute Force Solution O(3n) --> O(n)
 const reverseLinkedList = (list) => {
-    if (!list) {
-        return list;
-    }
-    let array = listToArray(list);
-    let reverse = reverseArray(array);
-    return arrayToLinkedList(reverse);
+  if (!list) {
+    return list;
+  }
+  const array = listToArray(list);
+  const reverse = reverseArray(array);
+  return arrayToLinkedList(reverse);
 }
 
 const listToArray = (linkedList) => {
-    let result = [];
+  const result = [];
 
-    while (linkedList) {
-        result.push(linkedList.val);
-        linkedList = linkedList.next;
-    }
+  while (linkedList) {
+    result.push(linkedList.val);
+    linkedList = linkedList.next;
+  }
 
-    return result;
+  return result;
 }
 
 const arrayToLinkedList = (array) => {
-    let head = new ListNode(array[0], null);
-    let list = head;
+  const head = new ListNode(array[0], null);
+  let list = head;
 
-    // 1) Iterate through the array
-    for (let i = 1; i < array.length; i++) {
-        list.next = new ListNode(array[i], null); // 2) Create a new node and append until there are none left
-        list = list.next;
-    }
+  // 1) Iterate through the array
+  for (let i = 1; i < array.length; i++) {
+    list.next = new ListNode(array[i], null); // 2) Create a new node and append until there are none left
+    list = list.next;
+  }
 
-    return head;
+  return head;
 }
 
 const reverseArray = (array) => {
-    for (let i = 0; i <  Math.floor(array.length/2); i++) {
-        let temp = array[i];
-        array[i] = array[array.length - 1 - i];
-        array[array.length - 1 - i] = temp;
-    }
+  for (let i = 0; i <  Math.floor(array.length/2); i++) {
+    const temp = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = temp;
+  }
 
-    return array;
+  return array;
 }
 
 
 function ListNode(val, next) {
-    this.val = val;
-    this.next = next;
+  this.val = val;
+  this.next = next;
 }
 
-let list = new ListNode(1, new ListNode(2, new ListNode(3, null)));
+const list = new ListNode(1, new ListNode(2, new ListNode(3, null)));
 
 // let result = reverseLinkedList(list);
 // console.log('Approach A: ', result);

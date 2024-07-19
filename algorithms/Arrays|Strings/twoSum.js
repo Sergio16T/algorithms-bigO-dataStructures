@@ -12,16 +12,16 @@ The extra space required depends on the number of items stored in the hash table
  * @return {number[]}
  */
 const twoSum = (nums, target) => {
-    const hashmap = {};
+  const hashmap = {};
 
-    for (let i = 0; i < nums.length; i++) {
-        // e.g. target is 5. current value is 8. 5 - 8 = -3
-        let match = target - nums[i];
-        if (match in hashmap) {
-            return new Array(i, hashmap[match])
-        }
-        hashmap[nums[i]] = i; // since we store the index after the check we can be assured it won't be the same as i
+  for (let i = 0; i < nums.length; i++) {
+    // e.g. target is 5. current value is 8. 5 - 8 = -3
+    const match = target - nums[i];
+    if (match in hashmap) {
+      return new Array(i, hashmap[match])
     }
+    hashmap[nums[i]] = i; // since we store the index after the check we can be assured it won't be the same as i
+  }
 }
 
 
@@ -43,22 +43,22 @@ Space complexity: O(n).
 The extra space required depends on the number of items stored in the hash table, which stores exactly n elements.
 */
 const twoSum_WithTwoPass_Hashmap = function(nums, target) {
-    const hashmap = {};
-    for (let i = 0; i < nums.length; i++) {
-        // Iterate and store each value as the key with index as value
-        hashmap[nums[i]] = i;
+  const hashmap = {};
+  for (let i = 0; i < nums.length; i++) {
+    // Iterate and store each value as the key with index as value
+    hashmap[nums[i]] = i;
+  }
+  for (let i = 0; i < nums.length; i++) {
+    // target is 5
+    // subtract target from current value in iteration to get the matching value
+    // 5 - 3 = 2
+    // check for the match in the hashmap.
+    // if it's in the map then return the indicies.
+    const match = target - nums[i];
+    if (match in hashmap && hashmap[match] != i) { // make sure it's not same index
+      return new Array(i, hashmap[match])
     }
-    for (let i = 0; i < nums.length; i++) {
-        // target is 5
-        // subtract target from current value in iteration to get the matching value
-        // 5 - 3 = 2
-        // check for the match in the hashmap.
-        // if it's in the map then return the indicies.
-        const match = target - nums[i];
-        if (match in hashmap && hashmap[match] != i) { // make sure it's not same index
-            return new Array(i, hashmap[match])
-        }
-    }
+  }
 };
 
 
@@ -70,13 +70,13 @@ const twoSum_WithTwoPass_Hashmap = function(nums, target) {
 // O(1) Space Complexity: The space required does not depend on the size of the input array, so only constant space is used.
 
 const bruteForceSolution = function(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        let outerNumber = nums[i];
-        for (let j = i + 1; j < nums.length; j++) {
-            let innerNumber = nums[j];
-            if (outerNumber + innerNumber == target) {
-                return new Array(i, j)
-            }
-        }
+  for (let i = 0; i < nums.length; i++) {
+    const outerNumber = nums[i];
+    for (let j = i + 1; j < nums.length; j++) {
+      const innerNumber = nums[j];
+      if (outerNumber + innerNumber == target) {
+        return new Array(i, j)
+      }
     }
+  }
 }

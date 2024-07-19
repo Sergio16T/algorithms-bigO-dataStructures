@@ -1,5 +1,7 @@
 ## Sliding Window
-
+Two types of subproblems
+1. fixed size sliding window
+2. variable size sliding window
 
 ```JavaScript
 
@@ -38,6 +40,7 @@ var lengthOfLIS = function(nums) {
 
 backtracking is a general algorithm for finding all (or some) solutions to some computational problems. The idea is that it incrementally builds candidates to the solutions, and abandons a candidate ("backtrack") as soon as it determines that this candidate cannot lead to a final solution.
 
+DFS Algorithm's are a great example for solutions that use Backtracking
 
 ## Dynamic Programing
 
@@ -75,6 +78,11 @@ Use 2 pointers to iterate through input data. Storing values as needed
 Two pointer approach is an essential part of a programmer’s toolkit, especially in technical interviews. The name does justice in this case, it involves using two pointers to save time and space. (Here, pointers are basically array indexes).
 
 The idea here is to iterate two different parts of the array simultaneously to get the answer faster.
+
+## Two Pointer Sub patterns
+
+### Approaching Pointers
+Two Pointers Moving Toward Each Other
 
 
 ## Fast & Slow Pointers

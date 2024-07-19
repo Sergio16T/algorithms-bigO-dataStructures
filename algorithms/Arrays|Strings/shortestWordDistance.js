@@ -20,21 +20,21 @@ Space complexity: O(1), since no additional space is allocated.
 */
 
 var shortestDistance = function(words, word1, word2) {
-    let i1 = -1, i2 = -1, minDistance = words.length;
-    // iterate throug words checking each value to see if it is equal to word1 or word2.
-    // store the indexes of the most recently discovered instance of each word
-    // check to see if both indexes are not equal to -1 and then do a comparison to find shortest distance.
-    for (let i = 0; i < words.length; i++) {
-        let word = words[i];
-        if (word === word1) {
-            i1 = i;
-        } else if (word === word2) {
-            i2 = i
-        }
-
-        if (i1 !== -1 && i2 !== -1) {
-            minDistance = Math.min(minDistance, Math.abs(i1 - i2));
-        }
+  let i1 = -1, i2 = -1, minDistance = words.length;
+  // iterate throug words checking each value to see if it is equal to word1 or word2.
+  // store the indexes of the most recently discovered instance of each word
+  // check to see if both indexes are not equal to -1 and then do a comparison to find shortest distance.
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    if (word === word1) {
+      i1 = i;
+    } else if (word === word2) {
+      i2 = i
     }
-    return minDistance;
+
+    if (i1 !== -1 && i2 !== -1) {
+      minDistance = Math.min(minDistance, Math.abs(i1 - i2));
+    }
+  }
+  return minDistance;
 };

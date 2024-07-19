@@ -18,26 +18,26 @@ TIME: O(n)
 SPACE: O(1)
 */
 var _removeElement = function(nums, val) {
-    // Input: nums = [3,2,2,3], val = 3
-    // Output: 2, nums = [2,2,_,_]
-    let k = 0; // we could iterate until length of nums - k (k is number of occurences)
-    // k can also represent the end value to switch with
+  // Input: nums = [3,2,2,3], val = 3
+  // Output: 2, nums = [2,2,_,_]
+  let k = 0; // we could iterate until length of nums - k (k is number of occurences)
+  // k can also represent the end value to switch with
 
-    // let current; // can represent the current iteration in loop OR current val..
-    // as we find matches switch the value at end of array - k with the current value
-    // make sure we when we switch we recheck the new value at that index
+  // let current; // can represent the current iteration in loop OR current val..
+  // as we find matches switch the value at end of array - k with the current value
+  // make sure we when we switch we recheck the new value at that index
 
-    for (let current = 0; current < nums.length - k; current++) {
-        let currentVal = nums[current];
-        if (currentVal === val) {
-            let temp = nums[current];
-            nums[current] = nums[nums.length - 1 - k];
-            nums[nums.length - 1 - k] = temp;
-            k++;
-            current--;
-        }
+  for (let current = 0; current < nums.length - k; current++) {
+    const currentVal = nums[current];
+    if (currentVal === val) {
+      const temp = nums[current];
+      nums[current] = nums[nums.length - 1 - k];
+      nums[nums.length - 1 - k] = temp;
+      k++;
+      current--;
     }
-    return nums.length - k;
+  }
+  return nums.length - k;
 
 }
 
@@ -49,15 +49,15 @@ var _removeElement = function(nums, val) {
  * @return {number}
  */
 var removeElement = function(nums, val) {
-    // iterate through nums splicing the array whenever val is found
-    // when removed must decrement counter since element in that iteration was removed.
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === val) {
-            nums.splice(i, 1);
-            i--;
-        }
+  // iterate through nums splicing the array whenever val is found
+  // when removed must decrement counter since element in that iteration was removed.
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
+      i--;
     }
-    return nums.length;
+  }
+  return nums.length;
 };
 
 
@@ -78,16 +78,16 @@ Note that the last element that was swapped in could be the value you want to re
 
 */
 function removeElement2(nums, val) {
-    let i = 0;
-    let n = nums.length;
-    while (i < n) {
-        if (nums[i] == val) {
-            nums[i] = nums[n - 1];
-            // reduce array size by one
-            n--;
-        } else {
-            i++;
-        }
+  let i = 0;
+  let n = nums.length;
+  while (i < n) {
+    if (nums[i] == val) {
+      nums[i] = nums[n - 1];
+      // reduce array size by one
+      n--;
+    } else {
+      i++;
     }
-    return n;
+  }
+  return n;
 }

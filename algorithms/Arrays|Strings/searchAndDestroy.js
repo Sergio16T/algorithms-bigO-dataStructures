@@ -5,11 +5,11 @@ as these arguments.
 */
 
 function destroyer() {
-    let [array, ...rest] = arguments;
-    rest.forEach(item => {
-        array = array.filter(value => value !== item);
-    });
-    return array;
+  let [array, ...rest] = arguments;
+  rest.forEach(item => {
+    array = array.filter(value => value !== item);
+  });
+  return array;
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3); // returns [1, 1]
