@@ -40,5 +40,19 @@ var groupAnagrams = function(strs) {
 
 };
 
+var _groupAnagrams = function(strs) {
+  const map = new Map();
 
+  // One pass
+  for (const str of strs) {
+    const key = str.split('').sort().join('');
+    if (map.has(key)) {
+      map.set(key, [...map.get(key), str])
+    } else {
+      map.set(key, new Array(str));
+    }
+  }
+
+  return [...map.values()];
+};
 

@@ -1,9 +1,12 @@
-// Return indices of the two numbers that add up to the target.
+//
 
 /**
+ * Return indices of the two numbers that add up to the target.
+ *
  * One Pass HashMap
+ *
  * Time complexity: O(n).
- *  We traverse the list containing n elements only once. Each lookup in the table costs only O(1) time.
+  We traverse the list containing n elements only once. Each lookup in the table costs only O(1) time.
 
 Space complexity: O(n).
 The extra space required depends on the number of items stored in the hash table, which stores at most n elements.

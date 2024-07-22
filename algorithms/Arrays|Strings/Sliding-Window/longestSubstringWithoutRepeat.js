@@ -34,19 +34,18 @@ when the set does not contain character, we can proceed with adding to set calcu
 
 
 /**
- * @param {string} s
- * @return {number}
-*/
-/*
- longest continious substring without repeating characters
+ * longest continious substring without repeating characters:
  * use a set to store values that are unique
  * sliding window if the set contains the character increase the left position of
  * the window until it is unique
  * if we have a unique character determine the max by comparing against current max.
 
- TIME: O(n)
- SPACE: O(n) where n is the number of elements stored in set which could be the length of s.
- */
+  * TIME: O(n)
+  *
+  * SPACE: O(n) where n is the number of elements stored in set which could be the length of s.
+ * @param {string} s
+ * @return {number}
+*/
 var lengthOfLongestSubstring = function(s) {
   const set = new Set();
   let left = 0,

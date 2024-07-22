@@ -1,20 +1,18 @@
 /**
+ *  Determine if all characters in S can be replaced to get t
+ *
+ * Constraints
+    1. Order of characters must be maintained
+    2. No 2 characters may map to the same characters
+    3. A character may map to itself
+  *
+  * TIME COMPLEXITY: O(N) where n is length of s
+  *
+  * SPACE IS O(s + t) however since we know that the alphabet is limited to 26 characters the max would be 26 + 26 so constant O(1)
  * @param {string} s
  * @param {string} t
  * @return {boolean}
- */
-
-// Determine if all characters in S can be replaced to get t
-/*
-Constraints
-Order of characters must be maintained
-No 2 characters may map to the same characters
-A character may map to itself
 */
-/*
-TIME COMPLEXITY: O(N) where n is length of s
-SPACE IS O(s + t) however since we know that the alphabet is limited to 26 characters the max would be 26 + 26 so constant O(1)
- */
 var isIsomorphic = function(s, t) {
   // check if str length is equal
   if (s.length !== t.length) {
