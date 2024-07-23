@@ -8,6 +8,7 @@
  */
 /**
  * Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+ *
  * Time Complexity: O(n)
  *
  * Space Complexity: O(n)
