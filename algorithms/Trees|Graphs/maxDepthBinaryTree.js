@@ -18,8 +18,8 @@ var maxDepth = function(root) {
   if (!root) {
     return 0;
   }
-  const lh = maxDepth(root.left);
-  const rh = maxDepth(root.right);
+  const lh = maxDepth(root.left); // left height
+  const rh = maxDepth(root.right); // right height
 
   return Math.max(lh, rh) + 1;
 }
