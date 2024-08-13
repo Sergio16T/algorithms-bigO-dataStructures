@@ -13,12 +13,12 @@ const config: Config = {
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/algorithms-bigO-dataStructures',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Sergio16T', // Usually your GitHub org/user name.
-  projectName: 'Algorithms and Data Structures', // Usually your repo name.
+  projectName: 'algorithms-bigO-dataStructures', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -80,6 +80,9 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
+    colorMode: {
+      defaultMode: 'dark',
+    },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Algorithms and Data Structures',

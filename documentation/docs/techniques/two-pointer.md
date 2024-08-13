@@ -162,6 +162,32 @@ function partition(arr, low, high) {
 }
 ```
 
+Example: Given an array of integers, rearrange the array so that all odd numbers appear before all even numbers.
+
+```JavaScript
+function partitionOddEven(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    // Move the left pointer until we find an even number
+    while (left < right && arr[left] % 2 !== 0) {
+      left++;
+    }
+    // Move the right pointer until we find an odd number
+    while (left < right && arr[right] % 2 === 0) {
+      right--;
+    }
+    // Swap the even number on the left with the odd number on the right
+    if (left < right) {
+      [arr[left], arr[right]] = [arr[right], arr[left]];
+      left++;
+      right--;
+    }
+  }
+}
+```
+
 ## 5. Fast and slow pointers
 
 Fast and slow pointers is a substantial sub-pattern. Read more [here](/docs/techniques/fast-and-slow-pointers)
