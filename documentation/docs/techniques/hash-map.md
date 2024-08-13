@@ -27,6 +27,32 @@ function countFrequencies(str) {
 }
 ```
 
+An example problem using a frequencyMap to determine whether a string (ransom note) can be constructed from the values in another string (magazine).
+
+```JavaScript
+var canConstruct = function(ransomNote, magazine) {
+  const magazineCharCount = new Map();
+
+  for (const char of magazine) {
+    if (magazineCharCount.has(char)) {
+      magazineCharCount.set(char, magazineCharCount.get(char) + 1);
+    } else {
+      magazineCharCount.set(char, 1);
+    }
+  }
+
+  for (const char of ransomNote) {
+    if (magazineCharCount.get(char) > 0) {
+      magazineCharCount.set(char, magazineCharCount.get(char) - 1);
+    } else {
+      return false;
+    }
+  }
+
+  return true;
+};
+```
+
 ## 2. Two Sum
 
 A classic problem, where using a Map can be used to achieve $O(n)$ run time.
