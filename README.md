@@ -6,6 +6,7 @@
 This repository contains solutions to Algorithms and implementations of Data Structures written in JavaScript with notes including Big O time complexity analyisis.
 
 ### Core Concepts
+
 - [Data Structures](#data-structures)
 - [Algorithms](#algorithms)
 - [Big O Notation And Time Complexity](#big-o-notation-and-time-complexity)
@@ -19,30 +20,31 @@ This repository contains solutions to Algorithms and implementations of Data Str
 -->
 
 ## Data Structures
+
 In computer science, a data structure is a data organization, management, and storage format that is usually chosen for efficient access to data.
 
 - Array
-- [Hash Table](./dataStructures/hash-table/)
-- [Stack](./dataStructures/stack/)
-- [Queue](./dataStructures/queue/)
-- [Priority Queue](./dataStructures/priority-queue/)
-- [Linked List](./dataStructures/linked-list/)
-- [Doubly Linked List](./dataStructures/doubly-linked-list/)
+- [Hash Table](./data-structures/hash-table/)
+- [Stack](./data-structures/stack/)
+- [Queue](./data-structures/queue/)
+- [Priority Queue](./data-structures/priority-queue/)
+- [Linked List](./data-structures/linked-list/)
+- [Doubly Linked List](./data-structures/doubly-linked-list/)
 - Tree
-    - Binary Search Tree
-    - AVL Tree
-    - Red-Black Tree
-    - Segment Tree - with min/max/sum range queries examples
-    - Fenwick Tree (Binary Indexed Tree)
+  - Binary Search Tree
+  - AVL Tree
+  - Red-Black Tree
+  - Segment Tree - with min/max/sum range queries examples
+  - Fenwick Tree (Binary Indexed Tree)
 - Graph
 
-
 ## Algorithms
+
 An algorithm is a set of instructions, used to solve problems or perform tasks.
 
 - Search
-    - Binary Search
-    - Linear Search
+  - Binary Search
+  - Linear Search
 - Sorting
 - Depth First Search
 - Breadth First Search
@@ -62,7 +64,7 @@ An algorithm is a set of instructions, used to solve problems or perform tasks.
 - O(1) Constant Time
 - O(n) Linear Time
 - O(n^2) Quadratic Time
-- O(n^3)	Cubic Time
+- O(n^3) Cubic Time
 - O(2^n) Exponential Time
 - O(log n) Logarithmic Time
 - O(n log n) Linearithmic Time
@@ -74,7 +76,6 @@ On the chart below you may find most common orders of growth of algorithms speci
 <img src="./assets/big-o-graph.png" width="95%"/>
 
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
-
 
 ## Drop The Constants
 
@@ -109,6 +110,7 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
 ```
 
 ## Drop Non-Dominant Terms
+
 - O(n^2 + n) becomes O(n^2)
 - O(n + log n) becomes O(n)
 - O(5 * 2^n + 1000n^100) becomes O(2^n)
@@ -116,6 +118,7 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (arr, size) => {
 ## Multi Part Algorithms Add vs. Multiply
 
 ### Add the Runtimes
+
 If your algorithm is in the form "do this, then, when you're all done, do that" then you add the run times.
 
 > O(A + B)
@@ -150,6 +153,7 @@ for (int b : arrB) {
 ```
 
 ### Multiply the Runtimes
+
 If your algorithm is in the form "do this for each time you do that" then you multiply the runtimes.
 
 > 0(A * B)
@@ -189,6 +193,7 @@ for (int j = 0; j < arrC.length; j++) {
 }
 
 ```
+
 ## Log N Runtimes
 
 > O(log n)
@@ -294,6 +299,7 @@ const loopThroughTwoInputsOfVaryingLength = (array1, array2) => {
     }
 }
 ```
+
 > Is this O(n^2)?
 
 > Only if both arrays are equal in length, or n.
