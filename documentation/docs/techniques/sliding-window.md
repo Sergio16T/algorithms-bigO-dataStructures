@@ -249,5 +249,4 @@ class AverageOfSubarrayOfSizeK {
     System.out.println("Averages of subarrays of size K: " + Arrays.toString(result));
   }
 }
-
 ```

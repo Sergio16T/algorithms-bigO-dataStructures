@@ -90,8 +90,23 @@ This technique uses two pointers that traverse the data at different intervals.
 
 ### Subsequence vs Substring
 
-More specifically, Subsequence is a generalization of substring. A subarray or substring will always be contiguous, but a subsequence need not be contiguous. That is, subsequences are not required to occupy consecutive positions within the original sequences
+ A subarray or substring will always be contiguous, but a subsequence need not be contiguous.
+
+ That is, subsequences are not required to occupy consecutive positions within the original sequences. However a subsequence maintains relative order of elements.
+
+For example:
+
+array = [1,2,3,4]
+[1,2,4] is a subsequence - maintains relative order but is not contigouous
+
+A Substring takes out characters from a string placed between two specified indices in a continuous order
+
+On the other hand, subsequence can be derived from another sequence by deleting some or none of the elements in between but always maintaining the relative order of elements in the original sequence.
 
 ### Subarray
 
 A subarray is a contiguous non-empty sequence of elements within an array.
+
+### Substring
+
+A substring is a contiguous non-empty sequence of characters within a string.
