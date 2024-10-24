@@ -13,3 +13,20 @@ function destroyer() {
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3); // returns [1, 1]
+
+
+function _destroyer(arr, ...args) {
+  // we can switch current value with last value if equal to one of the items
+  // and we can remove last item in array.
+  const set = new Set(args); // using set assuming args are unique now we have faster lookup time
+  for (let i = 0; i < arr.length; i++) {
+    const current = arr[i];
+    if (set.has(current)) { // to improve look up time we can create a map
+      arr[i] = arr[arr.length - 1];
+      arr[arr.length - 1] = current;
+      arr.pop();
+      i--;
+    }
+  }
+  return arr;
+}
