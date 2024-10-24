@@ -4,6 +4,34 @@
  * @param {number} val
  * @return {number}
  */
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+  /*
+  remove elements in place
+  order may be changed
+  first k elements in nums must not be equal to val
+      -- so we can swap last element in array with the current and then each time we do a swap we can increment a counter for number of elements with val.
+  returns number of elements in nums which are not equal to value
+  */
+
+  let numberOfOccurence = 0; // counts number of occurrence of val to subtract from nums
+  // iterate through nums checking if current num is equal to val if so we increment the numberOfOccurence and swap with last element in array and decrement the i
+  for (let i = 0; i < nums.length - numberOfOccurence; i++) {
+    const current = nums[i];
+    if (current === val) {
+      nums[i] = nums[nums.length - 1 - numberOfOccurence]; // [7, 2, 2, 1, 3, 0, 1]
+      nums[nums.length - 1 - numberOfOccurence] = current;
+      numberOfOccurence++;
+      i--;
+    }
+  }
+  return nums.length - numberOfOccurence;
+};
+
 
 /*
 remove all occurences of val in nums IN PLACE
@@ -48,7 +76,7 @@ var _removeElement = function(nums, val) {
  * @param {number} val
  * @return {number}
  */
-var removeElement = function(nums, val) {
+var __removeElement = function(nums, val) {
   // iterate through nums splicing the array whenever val is found
   // when removed must decrement counter since element in that iteration was removed.
   for (let i = 0; i < nums.length; i++) {

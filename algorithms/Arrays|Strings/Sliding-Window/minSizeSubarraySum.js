@@ -57,3 +57,40 @@ function _minSubarrayLen(target, arr) {
 
   return minLen === Infinity ? 0 : minLen;
 }
+
+
+
+/**
+ * @param {number} target
+ * @param {number[]} nums
+ * @return {number}
+ */
+var __minSubArrayLen = function(target, nums) {
+  /*
+    given nums array of positive intergers return the min length of subarray whose sum is greater than or equal to target
+
+    -- we're looking for the min length of a subarray that meets a condition this hints at a sliding window problem variable size
+
+    -- since the window is a variable size we need to check the current sum of the window against the target and also have a min window to store the window size
+     when we meet this condition. We also need to contract the window after we set the min window size and continue moving the window over
+  */
+
+  let currentSum = 0;
+  let minWindowSize = nums.length + 1; // set out of bounds default
+  let windowStart = 0;
+
+  for (let windowEnd = 0; windowEnd < nums.length; windowEnd++) {
+    currentSum += nums[windowEnd];
+    // windowEnd is the right pointer that iterates through nums
+    // target = 7, nums = [2,3,1,2,4,3]
+    // 6 + 2 is 8 window is windowStart is 0, windowEnd is 3
+    while (currentSum >= target) {
+      minWindowSize = Math.min(minWindowSize, (windowEnd - windowStart + 1));
+      currentSum -= nums[windowStart];
+      windowStart++;
+    }
+  }
+
+
+  return minWindowSize > nums.length ? 0 : minWindowSize;
+};
