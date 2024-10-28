@@ -1,18 +1,58 @@
-# Understanding Recursive Algorithm Run Time & Space Complexity
+---
+sidebar_position: 1
+---
+
+# Recursive Algorithms
+
+Understanding Recursive Algorithm Run Time & Space Complexity
 
 ## Time Complexity
 
 In recursive algorithms determing the time complexity is defined as follows:
 
-Time Complexity=(Depth of Recursion/Call Stack)×(Work Done per Call)
+$$
+  % Time Complexity=(Depth of Recursion)×(Work Done per Call)
+  \text{Time Complexity = (Depth of Recursion/Call Stack) × (Work Done per Call)}
+$$
 
-e.g. if depth of stack is in the worst O(n) but then in each execution we also do O(n) work then it would O(n^2)
+### Time Complexity Examples
 
-if depth of stack is O(log n) but we do O(n) work in each execution then the time complexity is O(n log n)
+If the depth of stack is in the worst case $O(n)$ and in each execution we also do $O(n)$ work then it would $O(n^2)$
+$$
+O(n) * O(n) = O(n^2)
+$$
 
-### Time Complexity Analysis Examples
+If the depth of stack is ${O}(\log{}n)$ but we do $O(n)$ work in each execution then the time complexity is ${O}(n\log{}n)$
+$$
+{O}(\log{}n) * O(n) = {O}(n\log{}n)
+$$
 
-Linear Recursion (O(n) Depth, O(1) Work per Call):
+## Space Complexity
+
+In recursive algorithms determing the space complexity is defined as follows:
+
+$$
+  % Space Complexity=(Depth of Recursion)×(Space Required per Call)
+  \text{Space Complexity = (Depth of Recursion) × (Space Required per Call)}
+$$
+
+### Space Complexity Examples
+
+If we have an algorithm with a depth of call stack of ${O}(\log{}n)$ but in each stack we have $O(1)$ space, it would be ${O}(\log{}n)$
+$$
+{O}(\log{}n) * O(1)= {O}(\log{}n)
+$$
+
+Whereas if depth is ${O}(\log{}n)$ but in each call we allocate $O(n)$ space it would be ${O}(n\log{}n)$ space
+$$
+{O}(\log{}n) * O(n) = {O}(n\log{}n)
+$$
+
+<!-- ## Time Complexity Analysis Examples -->
+
+<!-- **Linear Recursion:**
+
+(O(n) Depth, O(1) Work per Call):
 
 Example: Simple Fibonacci calculation without memoization.
 Here, the depth is O(n), and each call does O(1) work.
@@ -28,15 +68,7 @@ Example: Merge Sort.
 The depth of recursion is O(log n) (due to dividing the array in half each time), and the merging step does O(n) work.
 Time Complexity: O(n log n).
 
-## Space Complexity
-
-Space Complexity=(Depth of Recursion)×(Space Required per Call)
-
-e.g. If we have an algorithm with a depth of call stack of (Log N) but in each stack we have O(1) space it would be Space O(log n)
-
-Whereas if depth is Log N but in each call we allocate O(n) space it would be O(n log n) space
-
-### Space Complexity Analysis Examples
+## Space Complexity Analysis Examples
 
 Examples:
 Logarithmic Depth, Constant Space per Call (O(log n) Depth, O(1) Space per Call):
@@ -53,4 +85,4 @@ Linear Depth, Constant Space per Call (O(n) Depth, O(1) Space per Call):
 
 Example: A recursive function that processes an array or a linked list element by element without additional data structures.
 The depth is O(n), and each call uses O(1) space.
-Space Complexity: O(n).
+Space Complexity: O(n). -->

@@ -7,7 +7,34 @@
  * @param {string} s
  * @return {boolean}
  */
-var wordPattern = function(pattern, s) {
+
+function wordPattern(pattern, str) {
+  const words = str.split(' ');
+  if (pattern.length !== words.length) { return false; }
+
+  const patternMap = new Map();
+  const wordMap = new Map();
+
+  for (let i = 0; i < pattern.length; i++) {
+    const char = pattern[i];
+    const word = words[i];
+
+    if (patternMap.has(char) && patternMap.get(char) !== word) {
+      return false;
+    }
+    if (wordMap.has(word) && wordMap.get(word) !== char) {
+      return false;
+    }
+
+    patternMap.set(char, word);
+    wordMap.set(word, char);
+  }
+
+  return true;
+}
+
+
+var __wordPattern = function(pattern, s) {
   // first we split the string into words assuming words are always separated by a space
   const words = s.split(" ");
   if (words.length !== pattern.length) {
