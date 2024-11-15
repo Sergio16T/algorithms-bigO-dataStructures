@@ -4,6 +4,8 @@ sidebar_position: 13
 
 # Cyclic Algorithms
 
+## Round Robin
+
 Example of cyclic round robin algorithm for getting next server
 
 ```JavaScript
@@ -24,3 +26,7 @@ console.log(roundRobinLB()); // Server B
 console.log(roundRobinLB()); // Server C
 console.log(roundRobinLB()); // Server A (repeats)
 ```
+
+## Circular Queue
+
+Circular Queues are a substantial sub-pattern. Read more [here](/docs/techniques/queues)

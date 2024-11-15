@@ -1,4 +1,4 @@
-const { findMin } =  require('../algorithms/Arrays|Strings/findMinInRotatedArray');
+const { findMin } =  require('../algorithms/Arrays|Strings/BinarySearch/findMinInRotatedArray');
 
 describe('it tests findMin solution', () => {
   it('returns 1', () => {

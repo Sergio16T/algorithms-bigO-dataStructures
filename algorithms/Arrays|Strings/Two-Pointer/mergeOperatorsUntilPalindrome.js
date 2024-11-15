@@ -63,9 +63,31 @@
     return operation
  */
 
-
-
 var minimumOperations = function(nums) {
+  // approaching pointers
+  let p1 = 0;
+  let p2 = nums.length - 1;
+  let operations = 0;
+
+  while (p1 < p2) {
+    if (nums[p1] === nums[p2]) {
+      p1++;
+      p2--;
+    } else if (nums[p1] > nums[p2]) {
+      nums[p2 - 1] += nums[p2]
+      p2--;
+      operations++;
+    } else {
+      nums[p1 + 1] += nums[p1];
+      p1++;
+      operations++;
+    }
+  }
+  return operations
+};
+
+
+var _minimumOperations = function(nums) {
   // approaching pointers
   let p1 = 0;
   let p2 = nums.length - 1;
