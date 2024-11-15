@@ -98,7 +98,7 @@ const findPairs = (nums, diff) => {
         count+=1;
       }
     } else {
-      if (dictionary[number] > 1) {count +=1;}
+      if (dictionary[number] > 1) { count +=1; }
     }
   }
 

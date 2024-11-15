@@ -14,7 +14,7 @@ class TreeNode {
 function preOrderTraversal(root) {
   const result = [];
   function traverse(node) {
-    if (!node) {return;}
+    if (!node) { return; }
     result.push(node.value); // Visit the root
     traverse(node.left);     // Visit the left subtree
     traverse(node.right);    // Visit the right subtree

@@ -38,7 +38,6 @@ function findMin(array) {
     }
   }
   return array[left];
-
 }
 
 findMin(rotatedArray) // 1
