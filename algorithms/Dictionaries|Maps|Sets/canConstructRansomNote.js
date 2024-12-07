@@ -26,11 +26,12 @@ var canConstruct = function(ransomNote, magazine) {
   const magazineCharCount = new Map();
 
   for (const char of magazine) {
-    if (magazineCharCount.has(char)) {
-      magazineCharCount.set(char, magazineCharCount.get(char) + 1);
-    } else {
-      magazineCharCount.set(char, 1);
-    }
+    magazineCharCount.set(char, (magazineCharCount.get(char) || 0) + 1);
+    // if (magazineCharCount.has(char)) {
+    //   magazineCharCount.set(char, magazineCharCount.get(char) + 1);
+    // } else {
+    //   magazineCharCount.set(char, 1);
+    // }
   }
 
   for (const char of ransomNote) {
