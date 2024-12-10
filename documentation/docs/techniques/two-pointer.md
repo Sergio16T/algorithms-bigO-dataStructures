@@ -31,6 +31,60 @@ function twoSumSorted(arr, target) {
 }
 ```
 
+Another strategy/problem that leverages approaching pointers is returning the min number of operations to add adjacent elements and replace them with their sum to turn a number into a palindrome.
+
+* Choose any two adjacent elements and replace them with their sum
+* Return the minimum number of operations needed to turn the array into a palindrome.
+
+<details open>
+  <summary>View sample inputs/outputs: </summary>
+
+  **Example 1:**
+    - **Input:** `nums = [1, 2, 3, 1]`
+    - **Output:** `1` operation
+    - **Operations:**
+      *(1 operation: 2 + 3)* &nbsp;&nbsp;`[1, 5, 1]`
+
+  **Example 2:**
+    - **Input:** `nums = [1, 2, 3, 4]`
+    - **Output:** `3` operations
+    - **Operations:**
+      1. *(1 operation:  1 + 2)* &nbsp;&nbsp;`[3, 3, 4]`
+      2. *(2 operations: 3 + 3)* &nbsp;&nbsp;`[6, 4]`
+      3. *(3 operations: 6 + 4)* &nbsp;&nbsp;`[10]`
+
+  <!-- <details>
+    <summary>Nested toggle! Some surprise inside...</summary>
+
+    😲😲😲😲😲
+  </details> -->
+</details>
+
+```JavaScript
+var minimumOperations = function(nums) {
+  // approaching pointers
+  let p1 = 0;
+  let p2 = nums.length - 1;
+  let operations = 0;
+
+  while (p1 < p2) {
+    if (nums[p1] === nums[p2]) {
+      p1++;
+      p2--;
+    } else if (nums[p1] > nums[p2]) {
+      nums[p2 - 1] += nums[p2]
+      p2--;
+      operations++;
+    } else {
+      nums[p1 + 1] += nums[p1];
+      p1++;
+      operations++;
+    }
+  }
+  return operations
+};
+```
+
 ## 2. Traversing Two Arrays to Compare or Merge elements
 
 Comparing Two Sequences uses two pointers to traverse two sequences (arrays or strings) simultaneously, often to check if elements in one sequence follow the same order in the other.
@@ -206,4 +260,5 @@ The choice of two-pointer pattern depends on the problem’s requirements, such 
 - Whether you are looking for pairs, subsequences, or specific properties.
 - Whether you need to iterate over one or two sequences.
 
-Each pattern leverages the efficiency of two-pointer movement to optimize the traversal and comparison of data, often resulting in linear time complexity solutions to problems that might otherwise require more complex approaches.
+Each pattern leverages the efficiency of two-pointer movement to optimize the traversal and comparison of data,
+often resulting in linear time complexity solutions to problems that might otherwise require more complex approaches.
